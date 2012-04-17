@@ -11,18 +11,26 @@ namespace PayPal.Permissions {
 	using PayPal.Manager;
 	using PayPal.Permissions.Model;
 
-	public partial class PermissionsService : BasePayPalService{
+	public partial class PermissionsService :BasePayPalService{
 
-		 public PermissionsService() : base("Permissions", ""){}
-		/// <summary>
-		/// Sets standard parameters common to all requests
-		/// </summary>
+		private static string serviceName = "Permissions";
+
+
+		private static string serviceVersion"";
+
+
+		 public PermissionsService() : base(serviceName)
+		        {}
+	/// <summary>
+ /// Sets standard parameters common to all requests
+ /// </summary>
 		/**
 		 *
 		 */
 		public RequestPermissionsResponse RequestPermissions(RequestPermissionsRequest RequestPermissionsRequest, string apiUsername) 
 		{
-			string resp = call("RequestPermissions", RequestPermissionsRequest.toNVPString(""), apiUsername);
+			BasePayPalService service = new BasePayPalService(serviceName);
+			string resp = service.call("RequestPermissions", RequestPermissionsRequest.toNVPString(""), apiUsername);
 
 			NVPUtil util = new NVPUtil();
 			return new RequestPermissionsResponse(util.parseNVPString(resp), "");
@@ -37,7 +45,8 @@ namespace PayPal.Permissions {
 		 */
 		public GetAccessTokenResponse GetAccessToken(GetAccessTokenRequest GetAccessTokenRequest, string apiUsername) 
 		{
-			string resp = call("GetAccessToken", GetAccessTokenRequest.toNVPString(""), apiUsername);
+			BasePayPalService service = new BasePayPalService(serviceName);
+			string resp = service.call("GetAccessToken", GetAccessTokenRequest.toNVPString(""), apiUsername);
 
 			NVPUtil util = new NVPUtil();
 			return new GetAccessTokenResponse(util.parseNVPString(resp), "");
@@ -52,7 +61,8 @@ namespace PayPal.Permissions {
 		 */
 		public GetPermissionsResponse GetPermissions(GetPermissionsRequest GetPermissionsRequest, string apiUsername) 
 		{
-			string resp = call("GetPermissions", GetPermissionsRequest.toNVPString(""), apiUsername);
+			BasePayPalService service = new BasePayPalService(serviceName);
+			string resp = service.call("GetPermissions", GetPermissionsRequest.toNVPString(""), apiUsername);
 
 			NVPUtil util = new NVPUtil();
 			return new GetPermissionsResponse(util.parseNVPString(resp), "");
@@ -67,7 +77,8 @@ namespace PayPal.Permissions {
 		 */
 		public CancelPermissionsResponse CancelPermissions(CancelPermissionsRequest CancelPermissionsRequest, string apiUsername) 
 		{
-			string resp = call("CancelPermissions", CancelPermissionsRequest.toNVPString(""), apiUsername);
+			BasePayPalService service = new BasePayPalService(serviceName);
+			string resp = service.call("CancelPermissions", CancelPermissionsRequest.toNVPString(""), apiUsername);
 
 			NVPUtil util = new NVPUtil();
 			return new CancelPermissionsResponse(util.parseNVPString(resp), "");
@@ -82,7 +93,8 @@ namespace PayPal.Permissions {
 		 */
 		public GetBasicPersonalDataResponse GetBasicPersonalData(GetBasicPersonalDataRequest GetBasicPersonalDataRequest, string apiUsername) 
 		{
-			string resp = call("GetBasicPersonalData", GetBasicPersonalDataRequest.toNVPString(""), apiUsername);
+			BasePayPalService service = new BasePayPalService(serviceName);
+			string resp = service.call("GetBasicPersonalData", GetBasicPersonalDataRequest.toNVPString(""), apiUsername);
 
 			NVPUtil util = new NVPUtil();
 			return new GetBasicPersonalDataResponse(util.parseNVPString(resp), "");
@@ -97,7 +109,8 @@ namespace PayPal.Permissions {
 		 */
 		public GetAdvancedPersonalDataResponse GetAdvancedPersonalData(GetAdvancedPersonalDataRequest GetAdvancedPersonalDataRequest, string apiUsername) 
 		{
-			string resp = call("GetAdvancedPersonalData", GetAdvancedPersonalDataRequest.toNVPString(""), apiUsername);
+			BasePayPalService service = new BasePayPalService(serviceName);
+			string resp = service.call("GetAdvancedPersonalData", GetAdvancedPersonalDataRequest.toNVPString(""), apiUsername);
 
 			NVPUtil util = new NVPUtil();
 			return new GetAdvancedPersonalDataResponse(util.parseNVPString(resp), "");
