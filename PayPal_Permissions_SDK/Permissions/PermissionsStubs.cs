@@ -8,27 +8,28 @@ namespace PayPal.Permissions.Model {
 	using System.Collections.Generic;
 	using PayPal.Util;
 
-public class EnumUtils{
-public static string getDescription(Enum value){
-string description="";DescriptionAttribute[] attributes = (DescriptionAttribute[])value.GetType().GetField(value.ToString()).GetCustomAttributes(typeof(DescriptionAttribute), false);
-			            if (attributes.Length > 0)
-			            {
-			                description= attributes[0].Description;
-			            }
-return description;
-}
-public static object getValue(String value,Type enumType){
-string[] names = Enum.GetNames(enumType);
-			            foreach (string name in names)
-			            {
-			                if (getDescription((Enum)Enum.Parse(enumType, name)).Equals(value))
-			                {
-			                    return Enum.Parse(enumType, name);
-			                }
-			            }
-return null;
+	public class EnumUtils{
+		public static string getDescription(Enum value){
+			string description="";
+			DescriptionAttribute[] attributes = (DescriptionAttribute[])value.GetType().GetField(value.ToString()).GetCustomAttributes(typeof(DescriptionAttribute), false);
+			if (attributes.Length > 0)
+			{
+				description= attributes[0].Description;
+			}
+			return description;
 		}
-}
+		public static object getValue(String value,Type enumType){
+			string[] names = Enum.GetNames(enumType);
+			foreach (string name in names)
+			{
+				if (getDescription((Enum)Enum.Parse(enumType, name)).Equals(value))
+				{
+					return Enum.Parse(enumType, name);
+				}
+			}
+			return null;
+		}
+	}
 	public enum AckCode {
 [Description("Success")]SUCCESS,
 [Description("Failure")]FAILURE,
@@ -109,19 +110,20 @@ return null;
 
 	 public CancelPermissionsResponse(Dictionary<string, string> map, string prefix) {
 			string key = "";
+			int i;
 			key = prefix + "responseEnvelope";
 			if (map.ContainsKey(key + ".timestamp")) {
 				this.responseEnvelope = new ResponseEnvelope(map, key + '.');
 			}
-		int i=0;
-		while(true) {
+			i = 0;
+			while(true) {
 				key = prefix + "error" + '(' + i + ")";
 				if (map.ContainsKey(key + ".errorId")) {
 					this.error.Add( new ErrorData(map, key + '.')); 
 				}
-		else break;
-		i++;
-		}
+				else break;
+				i++;
+			}
 		}
 	}
 
@@ -217,6 +219,7 @@ return null;
 
 	 public ErrorData(Dictionary<string, string> map, string prefix) {
 			string key = "";
+			int i;
 			key = prefix + "errorId";
 			if (map.ContainsKey(key)) {
 				this.errorId = System.Convert.ToInt32( map[key] );
@@ -245,15 +248,15 @@ return null;
 			if (map.ContainsKey(key)) {
 				this.exceptionId = map[key];
 			}
-		int i=0;
-		while(true) {
+			i = 0;
+			while(true) {
 				key = prefix + "parameter" + '(' + i + ")";
 				if (map.ContainsKey(key + ".name")) {
 					this.parameter.Add( new ErrorParameter(map, key + '.')); 
 				}
-		else break;
-		i++;
-		}
+				else break;
+				i++;
+			}
 		}
 	}
 
@@ -284,6 +287,7 @@ return null;
 
 	 public ErrorParameter(Dictionary<string, string> map, string prefix) {
 			string key = "";
+			int i;
 			key = prefix + "name";
 			if (map.ContainsKey(key)) {
 				this.name = map[key];
@@ -326,19 +330,20 @@ return null;
 
 	 public FaultMessage(Dictionary<string, string> map, string prefix) {
 			string key = "";
+			int i;
 			key = prefix + "responseEnvelope";
 			if (map.ContainsKey(key + ".timestamp")) {
 				this.responseEnvelope = new ResponseEnvelope(map, key + '.');
 			}
-		int i=0;
-		while(true) {
+			i = 0;
+			while(true) {
 				key = prefix + "error" + '(' + i + ")";
 				if (map.ContainsKey(key + ".errorId")) {
 					this.error.Add( new ErrorData(map, key + '.')); 
 				}
-		else break;
-		i++;
-		}
+				else break;
+				i++;
+			}
 		}
 	}
 
@@ -499,19 +504,20 @@ return null;
 
 	 public GetAccessTokenResponse(Dictionary<string, string> map, string prefix) {
 			string key = "";
+			int i;
 			key = prefix + "responseEnvelope";
 			if (map.ContainsKey(key + ".timestamp")) {
 				this.responseEnvelope = new ResponseEnvelope(map, key + '.');
 			}
-		int i=0;
-		while(true) {
+			i = 0;
+			while(true) {
 			key = prefix + "scope" + '(' + i + ')';
 					if (map.ContainsKey(key)) {
 						this.scope.Add( map[key]);
 					}
-		else break;
-		i++;
-		}
+				else break;
+				i++;
+			}
 			key = prefix + "token";
 			if (map.ContainsKey(key)) {
 				this.token = map[key];
@@ -520,15 +526,15 @@ return null;
 			if (map.ContainsKey(key)) {
 				this.tokenSecret = map[key];
 			}
-		int i=0;
-		while(true) {
+			i = 0;
+			while(true) {
 				key = prefix + "error" + '(' + i + ")";
 				if (map.ContainsKey(key + ".errorId")) {
 					this.error.Add( new ErrorData(map, key + '.')); 
 				}
-		else break;
-		i++;
-		}
+				else break;
+				i++;
+			}
 		}
 	}
 
@@ -616,6 +622,7 @@ return null;
 
 	 public GetAdvancedPersonalDataResponse(Dictionary<string, string> map, string prefix) {
 			string key = "";
+			int i;
 			key = prefix + "responseEnvelope";
 			if (map.ContainsKey(key + ".timestamp")) {
 				this.responseEnvelope = new ResponseEnvelope(map, key + '.');
@@ -624,15 +631,15 @@ return null;
 			if (map.ContainsKey(key + ".personalData(0).personalDataValue")) {
 				this.response = new PersonalDataList(map, key + '.');
 			}
-		int i=0;
-		while(true) {
+			i = 0;
+			while(true) {
 				key = prefix + "error" + '(' + i + ")";
 				if (map.ContainsKey(key + ".errorId")) {
 					this.error.Add( new ErrorData(map, key + '.')); 
 				}
-		else break;
-		i++;
-		}
+				else break;
+				i++;
+			}
 		}
 	}
 
@@ -720,6 +727,7 @@ return null;
 
 	 public GetBasicPersonalDataResponse(Dictionary<string, string> map, string prefix) {
 			string key = "";
+			int i;
 			key = prefix + "responseEnvelope";
 			if (map.ContainsKey(key + ".timestamp")) {
 				this.responseEnvelope = new ResponseEnvelope(map, key + '.');
@@ -728,15 +736,15 @@ return null;
 			if (map.ContainsKey(key + ".personalData(0).personalDataValue")) {
 				this.response = new PersonalDataList(map, key + '.');
 			}
-		int i=0;
-		while(true) {
+			i = 0;
+			while(true) {
 				key = prefix + "error" + '(' + i + ")";
 				if (map.ContainsKey(key + ".errorId")) {
 					this.error.Add( new ErrorData(map, key + '.')); 
 				}
-		else break;
-		i++;
-		}
+				else break;
+				i++;
+			}
 		}
 	}
 
@@ -832,28 +840,29 @@ return null;
 
 	 public GetPermissionsResponse(Dictionary<string, string> map, string prefix) {
 			string key = "";
+			int i;
 			key = prefix + "responseEnvelope";
 			if (map.ContainsKey(key + ".timestamp")) {
 				this.responseEnvelope = new ResponseEnvelope(map, key + '.');
 			}
-		int i=0;
-		while(true) {
+			i = 0;
+			while(true) {
 			key = prefix + "scope" + '(' + i + ')';
 					if (map.ContainsKey(key)) {
 						this.scope.Add( map[key]);
 					}
-		else break;
-		i++;
-		}
-		int i=0;
-		while(true) {
+				else break;
+				i++;
+			}
+			i = 0;
+			while(true) {
 				key = prefix + "error" + '(' + i + ")";
 				if (map.ContainsKey(key + ".errorId")) {
 					this.error.Add( new ErrorData(map, key + '.')); 
 				}
-		else break;
-		i++;
-		}
+				else break;
+				i++;
+			}
 		}
 	}
 
@@ -930,6 +939,7 @@ return null;
 
 	 public PersonalData(Dictionary<string, string> map, string prefix) {
 			string key = "";
+			int i;
 			key = prefix + "personalDataKey";
 			if (map.ContainsKey(key)) {
 				this.personalDataKey = (PersonalAttribute)EnumUtils.getValue(map[key],typeof(PersonalAttribute));;
@@ -959,15 +969,16 @@ return null;
 
 	 public PersonalDataList(Dictionary<string, string> map, string prefix) {
 			string key = "";
-		int i=0;
-		while(true) {
+			int i;
+			i = 0;
+			while(true) {
 				key = prefix + "personalData" + '(' + i + ")";
 				if (map.ContainsKey(key + ".personalDataValue")) {
 					this.personalData.Add( new PersonalData(map, key + '.')); 
 				}
-		else break;
-		i++;
-		}
+				else break;
+				i++;
+			}
 		}
 	}
 
@@ -1126,6 +1137,7 @@ return null;
 
 	 public RequestPermissionsResponse(Dictionary<string, string> map, string prefix) {
 			string key = "";
+			int i;
 			key = prefix + "responseEnvelope";
 			if (map.ContainsKey(key + ".timestamp")) {
 				this.responseEnvelope = new ResponseEnvelope(map, key + '.');
@@ -1134,15 +1146,15 @@ return null;
 			if (map.ContainsKey(key)) {
 				this.token = map[key];
 			}
-		int i=0;
-		while(true) {
+			i = 0;
+			while(true) {
 				key = prefix + "error" + '(' + i + ")";
 				if (map.ContainsKey(key + ".errorId")) {
 					this.error.Add( new ErrorData(map, key + '.')); 
 				}
-		else break;
-		i++;
-		}
+				else break;
+				i++;
+			}
 		}
 	}
 
@@ -1197,6 +1209,7 @@ return null;
 
 	 public ResponseEnvelope(Dictionary<string, string> map, string prefix) {
 			string key = "";
+			int i;
 			key = prefix + "timestamp";
 			if (map.ContainsKey(key)) {
 				this.timestamp = map[key];
