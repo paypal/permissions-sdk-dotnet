@@ -18,7 +18,6 @@ namespace PayPal.Permissions {
 		}
 
 		/**	
-          *The Method does not have any comments, this is
           *AUTO_GENERATED
 	 	  */
 	 	public RequestPermissionsResponse RequestPermissions(RequestPermissionsRequest RequestPermissionsRequest, string apiUsername)
@@ -29,7 +28,6 @@ namespace PayPal.Permissions {
 	 	}
 	 
 	 	/** 
-          *The Method does not have any comments, this is
           *AUTO_GENERATED
 	 	  */
 	 	public RequestPermissionsResponse RequestPermissions(RequestPermissionsRequest RequestPermissionsRequest)
@@ -38,7 +36,6 @@ namespace PayPal.Permissions {
 	 	}
 
 		/**	
-          *The Method does not have any comments, this is
           *AUTO_GENERATED
 	 	  */
 	 	public GetAccessTokenResponse GetAccessToken(GetAccessTokenRequest GetAccessTokenRequest, string apiUsername)
@@ -49,7 +46,6 @@ namespace PayPal.Permissions {
 	 	}
 	 
 	 	/** 
-          *The Method does not have any comments, this is
           *AUTO_GENERATED
 	 	  */
 	 	public GetAccessTokenResponse GetAccessToken(GetAccessTokenRequest GetAccessTokenRequest)
@@ -58,7 +54,6 @@ namespace PayPal.Permissions {
 	 	}
 
 		/**	
-          *The Method does not have any comments, this is
           *AUTO_GENERATED
 	 	  */
 	 	public GetPermissionsResponse GetPermissions(GetPermissionsRequest GetPermissionsRequest, string apiUsername)
@@ -69,7 +64,6 @@ namespace PayPal.Permissions {
 	 	}
 	 
 	 	/** 
-          *The Method does not have any comments, this is
           *AUTO_GENERATED
 	 	  */
 	 	public GetPermissionsResponse GetPermissions(GetPermissionsRequest GetPermissionsRequest)
@@ -78,7 +72,6 @@ namespace PayPal.Permissions {
 	 	}
 
 		/**	
-          *The Method does not have any comments, this is
           *AUTO_GENERATED
 	 	  */
 	 	public CancelPermissionsResponse CancelPermissions(CancelPermissionsRequest CancelPermissionsRequest, string apiUsername)
@@ -89,7 +82,6 @@ namespace PayPal.Permissions {
 	 	}
 	 
 	 	/** 
-          *The Method does not have any comments, this is
           *AUTO_GENERATED
 	 	  */
 	 	public CancelPermissionsResponse CancelPermissions(CancelPermissionsRequest CancelPermissionsRequest)
@@ -98,7 +90,6 @@ namespace PayPal.Permissions {
 	 	}
 
 		/**	
-          *The Method does not have any comments, this is
           *AUTO_GENERATED
 	 	  */
 	 	public GetBasicPersonalDataResponse GetBasicPersonalData(GetBasicPersonalDataRequest GetBasicPersonalDataRequest, string apiUsername)
@@ -109,7 +100,6 @@ namespace PayPal.Permissions {
 	 	}
 	 
 	 	/** 
-          *The Method does not have any comments, this is
           *AUTO_GENERATED
 	 	  */
 	 	public GetBasicPersonalDataResponse GetBasicPersonalData(GetBasicPersonalDataRequest GetBasicPersonalDataRequest)
@@ -118,7 +108,6 @@ namespace PayPal.Permissions {
 	 	}
 
 		/**	
-          *The Method does not have any comments, this is
           *AUTO_GENERATED
 	 	  */
 	 	public GetAdvancedPersonalDataResponse GetAdvancedPersonalData(GetAdvancedPersonalDataRequest GetAdvancedPersonalDataRequest, string apiUsername)
@@ -129,7 +118,6 @@ namespace PayPal.Permissions {
 	 	}
 	 
 	 	/** 
-          *The Method does not have any comments, this is
           *AUTO_GENERATED
 	 	  */
 	 	public GetAdvancedPersonalDataResponse GetAdvancedPersonalData(GetAdvancedPersonalDataRequest GetAdvancedPersonalDataRequest)

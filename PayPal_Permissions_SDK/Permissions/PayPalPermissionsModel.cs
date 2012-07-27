@@ -49,7 +49,7 @@ namespace PayPal.Permissions.Model
 	{
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private int? errorIdField;
 		public int? errorId
@@ -66,7 +66,7 @@ namespace PayPal.Permissions.Model
 		
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private string domainField;
 		public string domain
@@ -83,7 +83,7 @@ namespace PayPal.Permissions.Model
 		
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private string subdomainField;
 		public string subdomain
@@ -100,7 +100,7 @@ namespace PayPal.Permissions.Model
 		
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private ErrorSeverity? severityField;
 		public ErrorSeverity? severity
@@ -117,7 +117,7 @@ namespace PayPal.Permissions.Model
 		
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private ErrorCategory? categoryField;
 		public ErrorCategory? category
@@ -134,7 +134,7 @@ namespace PayPal.Permissions.Model
 		
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private string messageField;
 		public string message
@@ -151,7 +151,7 @@ namespace PayPal.Permissions.Model
 		
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private string exceptionIdField;
 		public string exceptionId
@@ -168,7 +168,7 @@ namespace PayPal.Permissions.Model
 		
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private List<ErrorParameter> parameterField = new List<ErrorParameter>();
 		public List<ErrorParameter> parameter
@@ -256,7 +256,7 @@ namespace PayPal.Permissions.Model
 	{
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private string nameField;
 		public string name
@@ -273,7 +273,7 @@ namespace PayPal.Permissions.Model
 		
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private string valueField;
 		public string value
@@ -300,12 +300,12 @@ namespace PayPal.Permissions.Model
 		{
 			string key = "";
 			int i;
-			key = prefix + "name";
+			key = prefix + ".name";
 			if(map.ContainsKey(key))
 			{
 				this.name = map[key];
 			}
-			key = prefix + "value";
+			key = prefix;
 			if(map.ContainsKey(key))
 			{
 				this.value = map[key];
@@ -324,7 +324,7 @@ namespace PayPal.Permissions.Model
 	{
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private string timestampField;
 		public string timestamp
@@ -341,7 +341,7 @@ namespace PayPal.Permissions.Model
 		
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private AckCode? ackField;
 		public AckCode? ack
@@ -358,7 +358,7 @@ namespace PayPal.Permissions.Model
 		
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private string correlationIdField;
 		public string correlationId
@@ -375,7 +375,7 @@ namespace PayPal.Permissions.Model
 		
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private string buildField;
 		public string build
@@ -437,7 +437,7 @@ namespace PayPal.Permissions.Model
 	{
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private string errorLanguageField;
 		public string errorLanguage
@@ -488,7 +488,7 @@ namespace PayPal.Permissions.Model
 	{
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private ResponseEnvelope responseEnvelopeField;
 		public ResponseEnvelope responseEnvelope
@@ -505,7 +505,7 @@ namespace PayPal.Permissions.Model
 		
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private List<ErrorData> errorField = new List<ErrorData>();
 		public List<ErrorData> error
@@ -540,7 +540,7 @@ namespace PayPal.Permissions.Model
 			i = 0;
 			while(true){
 				key = prefix + "error" + "(" + i + ")";
-				if(map.ContainsKey(key + ".parameter(0)"))
+				if(map.ContainsKey(key + ".errorId"))
 				{
 					this.error.Add(new ErrorData(map, key + "."));
 				} else
@@ -633,7 +633,7 @@ namespace PayPal.Permissions.Model
 	{
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private RequestEnvelope requestEnvelopeField;
 		public RequestEnvelope requestEnvelope
@@ -650,7 +650,7 @@ namespace PayPal.Permissions.Model
 		
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private List<string> scopeField = new List<string>();
 		public List<string> scope
@@ -667,7 +667,7 @@ namespace PayPal.Permissions.Model
 		
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private string callbackField;
 		public string callback
@@ -731,7 +731,7 @@ namespace PayPal.Permissions.Model
 	{
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private ResponseEnvelope responseEnvelopeField;
 		public ResponseEnvelope responseEnvelope
@@ -748,7 +748,7 @@ namespace PayPal.Permissions.Model
 		
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private string tokenField;
 		public string token
@@ -765,7 +765,7 @@ namespace PayPal.Permissions.Model
 		
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private List<ErrorData> errorField = new List<ErrorData>();
 		public List<ErrorData> error
@@ -805,7 +805,7 @@ namespace PayPal.Permissions.Model
 			i = 0;
 			while(true){
 				key = prefix + "error" + "(" + i + ")";
-				if(map.ContainsKey(key + ".parameter(0)"))
+				if(map.ContainsKey(key + ".errorId"))
 				{
 					this.error.Add(new ErrorData(map, key + "."));
 				} else
@@ -830,7 +830,7 @@ namespace PayPal.Permissions.Model
 	{
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private RequestEnvelope requestEnvelopeField;
 		public RequestEnvelope requestEnvelope
@@ -847,7 +847,7 @@ namespace PayPal.Permissions.Model
 		
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private string tokenField;
 		public string token
@@ -864,7 +864,7 @@ namespace PayPal.Permissions.Model
 		
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private string verifierField;
 		public string verifier
@@ -881,7 +881,7 @@ namespace PayPal.Permissions.Model
 		
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private string subjectAliasField;
 		public string subjectAlias
@@ -940,7 +940,7 @@ namespace PayPal.Permissions.Model
 	{
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private ResponseEnvelope responseEnvelopeField;
 		public ResponseEnvelope responseEnvelope
@@ -957,7 +957,7 @@ namespace PayPal.Permissions.Model
 		
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private List<string> scopeField = new List<string>();
 		public List<string> scope
@@ -974,7 +974,7 @@ namespace PayPal.Permissions.Model
 		
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private string tokenField;
 		public string token
@@ -991,7 +991,7 @@ namespace PayPal.Permissions.Model
 		
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private string tokenSecretField;
 		public string tokenSecret
@@ -1008,7 +1008,7 @@ namespace PayPal.Permissions.Model
 		
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private List<ErrorData> errorField = new List<ErrorData>();
 		public List<ErrorData> error
@@ -1065,7 +1065,7 @@ namespace PayPal.Permissions.Model
 			i = 0;
 			while(true){
 				key = prefix + "error" + "(" + i + ")";
-				if(map.ContainsKey(key + ".parameter(0)"))
+				if(map.ContainsKey(key + ".errorId"))
 				{
 					this.error.Add(new ErrorData(map, key + "."));
 				} else
@@ -1089,7 +1089,7 @@ namespace PayPal.Permissions.Model
 	{
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private RequestEnvelope requestEnvelopeField;
 		public RequestEnvelope requestEnvelope
@@ -1106,7 +1106,7 @@ namespace PayPal.Permissions.Model
 		
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private string tokenField;
 		public string token
@@ -1162,7 +1162,7 @@ namespace PayPal.Permissions.Model
 	{
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private ResponseEnvelope responseEnvelopeField;
 		public ResponseEnvelope responseEnvelope
@@ -1179,7 +1179,7 @@ namespace PayPal.Permissions.Model
 		
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private List<string> scopeField = new List<string>();
 		public List<string> scope
@@ -1196,7 +1196,7 @@ namespace PayPal.Permissions.Model
 		
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private List<ErrorData> errorField = new List<ErrorData>();
 		public List<ErrorData> error
@@ -1243,7 +1243,7 @@ namespace PayPal.Permissions.Model
 			i = 0;
 			while(true){
 				key = prefix + "error" + "(" + i + ")";
-				if(map.ContainsKey(key + ".parameter(0)"))
+				if(map.ContainsKey(key + ".errorId"))
 				{
 					this.error.Add(new ErrorData(map, key + "."));
 				} else
@@ -1267,7 +1267,7 @@ namespace PayPal.Permissions.Model
 	{
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private RequestEnvelope requestEnvelopeField;
 		public RequestEnvelope requestEnvelope
@@ -1284,7 +1284,7 @@ namespace PayPal.Permissions.Model
 		
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private string tokenField;
 		public string token
@@ -1340,7 +1340,7 @@ namespace PayPal.Permissions.Model
 	{
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private ResponseEnvelope responseEnvelopeField;
 		public ResponseEnvelope responseEnvelope
@@ -1357,7 +1357,7 @@ namespace PayPal.Permissions.Model
 		
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private List<ErrorData> errorField = new List<ErrorData>();
 		public List<ErrorData> error
@@ -1392,7 +1392,7 @@ namespace PayPal.Permissions.Model
 			i = 0;
 			while(true){
 				key = prefix + "error" + "(" + i + ")";
-				if(map.ContainsKey(key + ".parameter(0)"))
+				if(map.ContainsKey(key + ".errorId"))
 				{
 					this.error.Add(new ErrorData(map, key + "."));
 				} else
@@ -1415,7 +1415,7 @@ namespace PayPal.Permissions.Model
 	{
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private List<PersonalAttribute?> attributeField = new List<PersonalAttribute?>();
 		public List<PersonalAttribute?> attribute
@@ -1465,7 +1465,7 @@ namespace PayPal.Permissions.Model
 	{
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private PersonalAttribute? personalDataKeyField;
 		public PersonalAttribute? personalDataKey
@@ -1482,7 +1482,7 @@ namespace PayPal.Permissions.Model
 		
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private string personalDataValueField;
 		public string personalDataValue
@@ -1534,7 +1534,7 @@ namespace PayPal.Permissions.Model
 	{
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private List<PersonalData> personalDataField = new List<PersonalData>();
 		public List<PersonalData> personalData
@@ -1590,7 +1590,7 @@ namespace PayPal.Permissions.Model
 	{
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private RequestEnvelope requestEnvelopeField;
 		public RequestEnvelope requestEnvelope
@@ -1607,7 +1607,7 @@ namespace PayPal.Permissions.Model
 		
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private PersonalAttributeList attributeListField;
 		public PersonalAttributeList attributeList
@@ -1667,7 +1667,7 @@ namespace PayPal.Permissions.Model
 	{
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private RequestEnvelope requestEnvelopeField;
 		public RequestEnvelope requestEnvelope
@@ -1684,7 +1684,7 @@ namespace PayPal.Permissions.Model
 		
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private PersonalAttributeList attributeListField;
 		public PersonalAttributeList attributeList
@@ -1741,7 +1741,7 @@ namespace PayPal.Permissions.Model
 	{
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private ResponseEnvelope responseEnvelopeField;
 		public ResponseEnvelope responseEnvelope
@@ -1758,7 +1758,7 @@ namespace PayPal.Permissions.Model
 		
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private PersonalDataList responseField;
 		public PersonalDataList response
@@ -1775,7 +1775,7 @@ namespace PayPal.Permissions.Model
 		
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private List<ErrorData> errorField = new List<ErrorData>();
 		public List<ErrorData> error
@@ -1815,7 +1815,7 @@ namespace PayPal.Permissions.Model
 			i = 0;
 			while(true){
 				key = prefix + "error" + "(" + i + ")";
-				if(map.ContainsKey(key + ".parameter(0)"))
+				if(map.ContainsKey(key + ".errorId"))
 				{
 					this.error.Add(new ErrorData(map, key + "."));
 				} else
@@ -1838,7 +1838,7 @@ namespace PayPal.Permissions.Model
 	{
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private ResponseEnvelope responseEnvelopeField;
 		public ResponseEnvelope responseEnvelope
@@ -1855,7 +1855,7 @@ namespace PayPal.Permissions.Model
 		
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private PersonalDataList responseField;
 		public PersonalDataList response
@@ -1872,7 +1872,7 @@ namespace PayPal.Permissions.Model
 		
 
 		/**
-          *No Document Comments
+          *
 		  */
 		private List<ErrorData> errorField = new List<ErrorData>();
 		public List<ErrorData> error
@@ -1912,7 +1912,7 @@ namespace PayPal.Permissions.Model
 			i = 0;
 			while(true){
 				key = prefix + "error" + "(" + i + ")";
-				if(map.ContainsKey(key + ".parameter(0)"))
+				if(map.ContainsKey(key + ".errorId"))
 				{
 					this.error.Add(new ErrorData(map, key + "."));
 				} else
