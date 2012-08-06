@@ -70,7 +70,10 @@ namespace PermissionsSampleApp
                 rpr = service.RequestPermissions(rp);
                 context.Response.Write("<html><body><textarea rows=30 cols=80>");
                 ObjectDumper.Write(rpr, 5, context.Response.Output);               
-                context.Response.Write("</textarea></body></html>");                
+                context.Response.Write("</textarea></body></html>");
+
+                context.Items["responseObject"] = rpr;
+                context.Items["responsePayload"] = service.getLastResponse();
 
                 string red = "<br>";
                 red = red + "<a href=";
@@ -108,7 +111,8 @@ namespace PermissionsSampleApp
                 ObjectDumper.Write(gats, 5, context.Response.Output);
                 context.Response.Write("</textarea></body></html>");
 
-                
+                context.Items["responseObject"] = gats;
+                context.Items["responsePayload"] = service.getLastResponse();
        
             }
             catch (System.Exception e)
