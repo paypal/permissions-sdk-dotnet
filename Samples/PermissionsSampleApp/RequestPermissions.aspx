@@ -11,8 +11,8 @@
    
     <h2>RequestPermissions API Test Page</h2>
  <form id="form1" runat="server" action="PermissionsHandler.ashx">
-  <%string url = Request.Url.Scheme + "://" + Request.Url.Host + ":" + Request.Url.Port;
-      string returnURL = url + "/GetAccessToken.aspx"; %>
+  <%string url = Request.Url.Scheme + "://" + Request.Url.Host + ":" + Request.Url.Port + Request.ApplicationPath;
+      string returnURL = url + (Request.ApplicationPath.EndsWith("/") ? "" : "/") + "GetAccessToken.aspx"; %>
 		<div class="params">
 			<div class="param_name">CallBack</div>
 			<div class="param_value">
