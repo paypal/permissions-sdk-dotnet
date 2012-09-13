@@ -1626,7 +1626,7 @@ namespace PayPal.Permissions.Model
 			{
 				if (this.attribute[i] != null)
 				{
-					sb.Append(prefix).Append("attribute").Append(i).Append(")=").Append(EnumUtils.getDescription(attribute[i]));
+					sb.Append(prefix).Append("attribute(").Append(i).Append(")=").Append(EnumUtils.getDescription(attribute[i]));
 					sb.Append("&");
 				}
 			}
