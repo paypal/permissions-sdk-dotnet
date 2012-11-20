@@ -10,9 +10,10 @@
 
 namespace PermissionsSampleApp {
     
-    public partial class GetAccessToken {
+    public partial class ShowError {
         protected System.Web.UI.HtmlControls.HtmlForm form1;
-        protected System.Web.UI.HtmlControls.HtmlInputText txtrequest_token;
-        protected System.Web.UI.HtmlControls.HtmlInputText txtverification_code;
+        protected System.Web.UI.WebControls.LinkButton DetailLinkButton;
+        protected System.Web.UI.WebControls.Panel MessagePanel;
+        protected System.Web.UI.WebControls.TextBox MessageTextBox;
     }
 }

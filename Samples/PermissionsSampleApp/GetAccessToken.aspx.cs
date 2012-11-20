@@ -15,20 +15,11 @@ namespace PermissionsSampleApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //for (int i = 0; i < Request.QueryString.Count; i++)
-            //{
-            //    Response.Write(Request.QueryString.Keys[i] + " = " +Request.QueryString[i] + "<br>");
-            //}
             if (Request.QueryString["request_token"] != null)
             {
                 this.txtrequest_token.Value = Request.QueryString["request_token"].ToString();
                 this.txtverification_code.Value = Request.QueryString["verification_code"].ToString();
             }
-        }
-
-        protected void btnGetAccessToken_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
