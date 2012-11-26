@@ -31,6 +31,7 @@
   <ItemGroup>
     <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL" />
     <Reference Include="PayPal_Core_SDK, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="PayPal_Permissions_SDK, Version=1.2.95.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -94,14 +95,9 @@
     <Content Include="Global.asax" />
     <Content Include="lib\log4net.dll" />
     <Content Include="lib\PayPal_Core_SDK.dll" />
+    <Content Include="lib\PayPal_Permissions_SDK.dll" />
     <Content Include="SanityTest\Web.development.config" />
     <Content Include="ShowError.aspx" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\PayPal_Permissions_SDK\PayPal_Permissions_SDK.csproj">
-      <Project>{1F5FF00B-CE0F-40B8-9BC4-7B5ED2087266}</Project>
-      <Name>PayPal_Permissions_SDK</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
