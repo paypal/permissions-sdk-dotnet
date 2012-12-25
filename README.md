@@ -1,4 +1,4 @@
-This repository contains the PayPal Permissions SDK C#.NET Class Library Application and the PermissionsSampleApp Sample ASP.NET C# Web Application.
+The repository contains the PayPal Permissions SDK C#.NET Class Library Application and the PermissionsSampleApp Sample ASP.NET C# Web Application.
 
 
 SDK Integration
