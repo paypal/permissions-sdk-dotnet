@@ -5,7 +5,7 @@ SDK Integration
 ---------------
 *	Integrate the PayPal Permissions SDK with an ASP.NET Web Application
 
-*	Use NuGet to install the 'PayPal_Permissions_SDK' package 
+*	Use NuGet to install the 'PayPalPermissionsSDK' package 
 
 *	The NuGet package installs the dependencies to the solution and automatically updates the project
 
