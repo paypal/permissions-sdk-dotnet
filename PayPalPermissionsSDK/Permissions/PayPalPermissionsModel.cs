@@ -16,8 +16,14 @@ using PayPal.Util;
 namespace PayPal.Permissions.Model
 {
 
+	/// <summary>
+	/// Utility class for Enums with descriptions
+	/// </summary>
 	public static class EnumUtils
 	{
+		/// <summary>
+		/// Get description for a give enum value
+		/// </summary>	
 		public static string GetDescription(Enum value)
 		{
 			string description = "";
@@ -29,6 +35,9 @@ namespace PayPal.Permissions.Model
 			return description;
 		}
 		
+		/// <summary>
+		/// Convert a string to an enum object
+		/// </summary>	
 		public static object GetValue(string value,Type enumType)
 		{
 			string[] names = Enum.GetNames(enumType);
@@ -44,17 +53,17 @@ namespace PayPal.Permissions.Model
 	}
 
 
-	/**
-      *
-      */
+	/// <summary>
+	/// 
+    /// </summary>
 	public partial class ErrorData	{
 		
 		// Default US culture info
 		private static CultureInfo DefaultCulture = new CultureInfo("en-US");
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private int? errorIdField;
 		public int? errorId
 		{
@@ -69,9 +78,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private string domainField;
 		public string domain
 		{
@@ -86,9 +95,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private string subdomainField;
 		public string subdomain
 		{
@@ -103,9 +112,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private ErrorSeverity? severityField;
 		public ErrorSeverity? severity
 		{
@@ -120,9 +129,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private ErrorCategory? categoryField;
 		public ErrorCategory? category
 		{
@@ -137,9 +146,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private string messageField;
 		public string message
 		{
@@ -154,9 +163,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private string exceptionIdField;
 		public string exceptionId
 		{
@@ -171,9 +180,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private List<ErrorParameter> parameterField = new List<ErrorParameter>();
 		public List<ErrorParameter> parameter
 		{
@@ -188,15 +197,23 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-	 	  * Default Constructor
-	 	  */
+		/// <summary>
+		/// Default Constructor
+	 	/// </summary>
 	 	public ErrorData()
 	 	{
 		}
 
 
-
+		/// <summary>
+		/// Factory method for creating new object instances. For use by the de-serialization classes only.
+	 	/// </summary>
+	 	/// <param name="map">NVP map as returned by an API call</param>
+	 	/// <param name="prefix">NVP prefix for this class in the response</param>
+	 	/// <param name="index">For array elements, index of this element in the response</param>
+	 	/// <returns>
+	 	/// A new ErrorData object created from the passed in NVP map
+	 	/// </returns>
 		public static ErrorData CreateInstance(Dictionary<string, string> map, string prefix, int index)
 		{
 			ErrorData errorData = null;
@@ -280,17 +297,17 @@ namespace PayPal.Permissions.Model
 
 
 
-	/**
-      *
-      */
+	/// <summary>
+	/// 
+    /// </summary>
 	public partial class ErrorParameter	{
 		
 		// Default US culture info
 		private static CultureInfo DefaultCulture = new CultureInfo("en-US");
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private string nameField;
 		public string name
 		{
@@ -305,9 +322,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private string valueField;
 		public string value
 		{
@@ -322,15 +339,23 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-	 	  * Default Constructor
-	 	  */
+		/// <summary>
+		/// Default Constructor
+	 	/// </summary>
 	 	public ErrorParameter()
 	 	{
 		}
 
 
-
+		/// <summary>
+		/// Factory method for creating new object instances. For use by the de-serialization classes only.
+	 	/// </summary>
+	 	/// <param name="map">NVP map as returned by an API call</param>
+	 	/// <param name="prefix">NVP prefix for this class in the response</param>
+	 	/// <param name="index">For array elements, index of this element in the response</param>
+	 	/// <returns>
+	 	/// A new ErrorParameter object created from the passed in NVP map
+	 	/// </returns>
 		public static ErrorParameter CreateInstance(Dictionary<string, string> map, string prefix, int index)
 		{
 			ErrorParameter errorParameter = null;
@@ -369,17 +394,17 @@ namespace PayPal.Permissions.Model
 
 
 
-	/**
-      *This is the sample message 
-      */
+	/// <summary>
+	/// This is the sample message 
+    /// </summary>
 	public partial class ResponseEnvelope	{
 		
 		// Default US culture info
 		private static CultureInfo DefaultCulture = new CultureInfo("en-US");
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private string timestampField;
 		public string timestamp
 		{
@@ -394,9 +419,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private AckCode? ackField;
 		public AckCode? ack
 		{
@@ -411,9 +436,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private string correlationIdField;
 		public string correlationId
 		{
@@ -428,9 +453,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private string buildField;
 		public string build
 		{
@@ -445,15 +470,23 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-	 	  * Default Constructor
-	 	  */
+		/// <summary>
+		/// Default Constructor
+	 	/// </summary>
 	 	public ResponseEnvelope()
 	 	{
 		}
 
 
-
+		/// <summary>
+		/// Factory method for creating new object instances. For use by the de-serialization classes only.
+	 	/// </summary>
+	 	/// <param name="map">NVP map as returned by an API call</param>
+	 	/// <param name="prefix">NVP prefix for this class in the response</param>
+	 	/// <param name="index">For array elements, index of this element in the response</param>
+	 	/// <returns>
+	 	/// A new ResponseEnvelope object created from the passed in NVP map
+	 	/// </returns>
 		public static ResponseEnvelope CreateInstance(Dictionary<string, string> map, string prefix, int index)
 		{
 			ResponseEnvelope responseEnvelope = null;
@@ -504,18 +537,18 @@ namespace PayPal.Permissions.Model
 
 
 
-	/**
-      *This specifies the list of parameters with every request to
-      *the service. 
-      */
+	/// <summary>
+	/// This specifies the list of parameters with every request to
+	/// the service. 
+    /// </summary>
 	public partial class RequestEnvelope	{
 		
 		// Default US culture info
 		private static CultureInfo DefaultCulture = new CultureInfo("en-US");
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private string errorLanguageField;
 		public string errorLanguage
 		{
@@ -530,17 +563,17 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-	 	  * Constructor with arguments
-	 	  */
+		/// <summary>
+		/// Constructor with arguments
+	 	/// </summary>
 	 	public RequestEnvelope(string errorLanguage)
 	 	{
 			this.errorLanguage = errorLanguage;
 		}
 
-		/**
-	 	  * Default Constructor
-	 	  */
+		/// <summary>
+		/// Default Constructor
+	 	/// </summary>
 	 	public RequestEnvelope()
 	 	{
 		}
@@ -560,17 +593,17 @@ namespace PayPal.Permissions.Model
 
 
 
-	/**
-      *
-      */
+	/// <summary>
+	/// 
+    /// </summary>
 	public partial class FaultMessage	{
 		
 		// Default US culture info
 		private static CultureInfo DefaultCulture = new CultureInfo("en-US");
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private ResponseEnvelope responseEnvelopeField;
 		public ResponseEnvelope responseEnvelope
 		{
@@ -585,9 +618,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private List<ErrorData> errorField = new List<ErrorData>();
 		public List<ErrorData> error
 		{
@@ -602,15 +635,23 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-	 	  * Default Constructor
-	 	  */
+		/// <summary>
+		/// Default Constructor
+	 	/// </summary>
 	 	public FaultMessage()
 	 	{
 		}
 
 
-
+		/// <summary>
+		/// Factory method for creating new object instances. For use by the de-serialization classes only.
+	 	/// </summary>
+	 	/// <param name="map">NVP map as returned by an API call</param>
+	 	/// <param name="prefix">NVP prefix for this class in the response</param>
+	 	/// <param name="index">For array elements, index of this element in the response</param>
+	 	/// <returns>
+	 	/// A new FaultMessage object created from the passed in NVP map
+	 	/// </returns>
 		public static FaultMessage CreateInstance(Dictionary<string, string> map, string prefix, int index)
 		{
 			FaultMessage faultMessage = null;
@@ -658,9 +699,9 @@ namespace PayPal.Permissions.Model
 
 
 
-	/**
-      *
-      */
+	/// <summary>
+	/// 
+	/// </summary>
     [Serializable]
 	public enum ErrorSeverity {
 		[Description("Error")]ERROR,	
@@ -670,9 +711,9 @@ namespace PayPal.Permissions.Model
 
 
 
-	/**
-      *
-      */
+	/// <summary>
+	/// 
+	/// </summary>
     [Serializable]
 	public enum ErrorCategory {
 		[Description("System")]SYSTEM,	
@@ -683,15 +724,15 @@ namespace PayPal.Permissions.Model
 
 
 
-	/**
-      * AckCodeType This code identifies the
-      * acknowledgment code types that could be used to
-      * communicate the status of processing a (request)
-      * message to an application. This code would be
-      * used as part of a response message that contains
-      * an application level acknowledgment element.
-      * 
-      */
+	/// <summary>
+	/// AckCodeType This code identifies the
+	///  acknowledgment code types that could be used to
+	///  communicate the status of processing a (request)
+	///  message to an application. This code would be
+	///  used as part of a response message that contains
+	///  an application level acknowledgment element.
+	///  
+	/// </summary>
     [Serializable]
 	public enum AckCode {
 		[Description("Success")]SUCCESS,	
@@ -705,10 +746,10 @@ namespace PayPal.Permissions.Model
 
 
 
-	/**
-      * Enumeration for Personal Attributes of a user.
-      * 
-      */
+	/// <summary>
+	/// Enumeration for Personal Attributes of a user.
+	///  
+	/// </summary>
     [Serializable]
 	public enum PersonalAttribute {
 		[Description("http://axschema.org/namePerson/first")]HTTPAXSCHEMAORGNAMEPERSONFIRST,	
@@ -730,19 +771,19 @@ namespace PayPal.Permissions.Model
 
 
 
-	/**
-      *Describes the request for permissions over an account.
-      *Primary element is "scope", which lists the permissions
-      *needed. 
-      */
+	/// <summary>
+	/// Describes the request for permissions over an account.
+	/// Primary element is "scope", which lists the permissions
+	/// needed. 
+    /// </summary>
 	public partial class RequestPermissionsRequest	{
 		
 		// Default US culture info
 		private static CultureInfo DefaultCulture = new CultureInfo("en-US");
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private RequestEnvelope requestEnvelopeField;
 		public RequestEnvelope requestEnvelope
 		{
@@ -757,9 +798,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private List<string> scopeField = new List<string>();
 		public List<string> scope
 		{
@@ -774,9 +815,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private string callbackField;
 		public string callback
 		{
@@ -791,18 +832,18 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-	 	  * Constructor with arguments
-	 	  */
+		/// <summary>
+		/// Constructor with arguments
+	 	/// </summary>
 	 	public RequestPermissionsRequest(List<string> scope, string callback)
 	 	{
 			this.scope = scope;
 			this.callback = callback;
 		}
 
-		/**
-	 	  * Default Constructor
-	 	  */
+		/// <summary>
+		/// Default Constructor
+	 	/// </summary>
 	 	public RequestPermissionsRequest()
 	 	{
 		}
@@ -834,17 +875,17 @@ namespace PayPal.Permissions.Model
 
 
 
-	/**
-      *Returns the temporary request token 
-      */
+	/// <summary>
+	/// Returns the temporary request token 
+    /// </summary>
 	public partial class RequestPermissionsResponse	{
 		
 		// Default US culture info
 		private static CultureInfo DefaultCulture = new CultureInfo("en-US");
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private ResponseEnvelope responseEnvelopeField;
 		public ResponseEnvelope responseEnvelope
 		{
@@ -859,9 +900,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private string tokenField;
 		public string token
 		{
@@ -876,9 +917,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private List<ErrorData> errorField = new List<ErrorData>();
 		public List<ErrorData> error
 		{
@@ -893,15 +934,23 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-	 	  * Default Constructor
-	 	  */
+		/// <summary>
+		/// Default Constructor
+	 	/// </summary>
 	 	public RequestPermissionsResponse()
 	 	{
 		}
 
 
-
+		/// <summary>
+		/// Factory method for creating new object instances. For use by the de-serialization classes only.
+	 	/// </summary>
+	 	/// <param name="map">NVP map as returned by an API call</param>
+	 	/// <param name="prefix">NVP prefix for this class in the response</param>
+	 	/// <param name="index">For array elements, index of this element in the response</param>
+	 	/// <returns>
+	 	/// A new RequestPermissionsResponse object created from the passed in NVP map
+	 	/// </returns>
 		public static RequestPermissionsResponse CreateInstance(Dictionary<string, string> map, string prefix, int index)
 		{
 			RequestPermissionsResponse requestPermissionsResponse = null;
@@ -955,19 +1004,19 @@ namespace PayPal.Permissions.Model
 
 
 
-	/**
-      *The request use to retrieve a permanent access token. The
-      *client can either send the token and verifier, or a subject.
-      *
-      */
+	/// <summary>
+	/// The request use to retrieve a permanent access token. The
+	/// client can either send the token and verifier, or a subject.
+	/// 
+    /// </summary>
 	public partial class GetAccessTokenRequest	{
 		
 		// Default US culture info
 		private static CultureInfo DefaultCulture = new CultureInfo("en-US");
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private RequestEnvelope requestEnvelopeField;
 		public RequestEnvelope requestEnvelope
 		{
@@ -982,9 +1031,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private string tokenField;
 		public string token
 		{
@@ -999,9 +1048,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private string verifierField;
 		public string verifier
 		{
@@ -1016,9 +1065,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private string subjectAliasField;
 		public string subjectAlias
 		{
@@ -1033,9 +1082,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-	 	  * Default Constructor
-	 	  */
+		/// <summary>
+		/// Default Constructor
+	 	/// </summary>
 	 	public GetAccessTokenRequest()
 	 	{
 		}
@@ -1068,19 +1117,19 @@ namespace PayPal.Permissions.Model
 
 
 
-	/**
-      *Permanent access token and token secret that can be used to
-      *make requests for protected resources owned by another
-      *account. 
-      */
+	/// <summary>
+	/// Permanent access token and token secret that can be used to
+	/// make requests for protected resources owned by another
+	/// account. 
+    /// </summary>
 	public partial class GetAccessTokenResponse	{
 		
 		// Default US culture info
 		private static CultureInfo DefaultCulture = new CultureInfo("en-US");
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private ResponseEnvelope responseEnvelopeField;
 		public ResponseEnvelope responseEnvelope
 		{
@@ -1095,9 +1144,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private List<string> scopeField = new List<string>();
 		public List<string> scope
 		{
@@ -1112,9 +1161,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private string tokenField;
 		public string token
 		{
@@ -1129,9 +1178,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private string tokenSecretField;
 		public string tokenSecret
 		{
@@ -1146,9 +1195,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private List<ErrorData> errorField = new List<ErrorData>();
 		public List<ErrorData> error
 		{
@@ -1163,15 +1212,23 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-	 	  * Default Constructor
-	 	  */
+		/// <summary>
+		/// Default Constructor
+	 	/// </summary>
 	 	public GetAccessTokenResponse()
 	 	{
 		}
 
 
-
+		/// <summary>
+		/// Factory method for creating new object instances. For use by the de-serialization classes only.
+	 	/// </summary>
+	 	/// <param name="map">NVP map as returned by an API call</param>
+	 	/// <param name="prefix">NVP prefix for this class in the response</param>
+	 	/// <param name="index">For array elements, index of this element in the response</param>
+	 	/// <returns>
+	 	/// A new GetAccessTokenResponse object created from the passed in NVP map
+	 	/// </returns>
 		public static GetAccessTokenResponse CreateInstance(Dictionary<string, string> map, string prefix, int index)
 		{
 			GetAccessTokenResponse getAccessTokenResponse = null;
@@ -1246,18 +1303,18 @@ namespace PayPal.Permissions.Model
 
 
 
-	/**
-      *Request to retrieve the approved list of permissions
-      *associated with a token. 
-      */
+	/// <summary>
+	/// Request to retrieve the approved list of permissions
+	/// associated with a token. 
+    /// </summary>
 	public partial class GetPermissionsRequest	{
 		
 		// Default US culture info
 		private static CultureInfo DefaultCulture = new CultureInfo("en-US");
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private RequestEnvelope requestEnvelopeField;
 		public RequestEnvelope requestEnvelope
 		{
@@ -1272,9 +1329,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private string tokenField;
 		public string token
 		{
@@ -1289,17 +1346,17 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-	 	  * Constructor with arguments
-	 	  */
+		/// <summary>
+		/// Constructor with arguments
+	 	/// </summary>
 	 	public GetPermissionsRequest(string token)
 	 	{
 			this.token = token;
 		}
 
-		/**
-	 	  * Default Constructor
-	 	  */
+		/// <summary>
+		/// Default Constructor
+	 	/// </summary>
 	 	public GetPermissionsRequest()
 	 	{
 		}
@@ -1324,17 +1381,17 @@ namespace PayPal.Permissions.Model
 
 
 
-	/**
-      *The list of permissions associated with the token. 
-      */
+	/// <summary>
+	/// The list of permissions associated with the token. 
+    /// </summary>
 	public partial class GetPermissionsResponse	{
 		
 		// Default US culture info
 		private static CultureInfo DefaultCulture = new CultureInfo("en-US");
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private ResponseEnvelope responseEnvelopeField;
 		public ResponseEnvelope responseEnvelope
 		{
@@ -1349,9 +1406,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private List<string> scopeField = new List<string>();
 		public List<string> scope
 		{
@@ -1366,9 +1423,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private List<ErrorData> errorField = new List<ErrorData>();
 		public List<ErrorData> error
 		{
@@ -1383,15 +1440,23 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-	 	  * Default Constructor
-	 	  */
+		/// <summary>
+		/// Default Constructor
+	 	/// </summary>
 	 	public GetPermissionsResponse()
 	 	{
 		}
 
 
-
+		/// <summary>
+		/// Factory method for creating new object instances. For use by the de-serialization classes only.
+	 	/// </summary>
+	 	/// <param name="map">NVP map as returned by an API call</param>
+	 	/// <param name="prefix">NVP prefix for this class in the response</param>
+	 	/// <param name="index">For array elements, index of this element in the response</param>
+	 	/// <returns>
+	 	/// A new GetPermissionsResponse object created from the passed in NVP map
+	 	/// </returns>
 		public static GetPermissionsResponse CreateInstance(Dictionary<string, string> map, string prefix, int index)
 		{
 			GetPermissionsResponse getPermissionsResponse = null;
@@ -1454,18 +1519,18 @@ namespace PayPal.Permissions.Model
 
 
 
-	/**
-      *Request to invalidate an access token and revoke the
-      *permissions associated with it. 
-      */
+	/// <summary>
+	/// Request to invalidate an access token and revoke the
+	/// permissions associated with it. 
+    /// </summary>
 	public partial class CancelPermissionsRequest	{
 		
 		// Default US culture info
 		private static CultureInfo DefaultCulture = new CultureInfo("en-US");
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private RequestEnvelope requestEnvelopeField;
 		public RequestEnvelope requestEnvelope
 		{
@@ -1480,9 +1545,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private string tokenField;
 		public string token
 		{
@@ -1497,17 +1562,17 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-	 	  * Constructor with arguments
-	 	  */
+		/// <summary>
+		/// Constructor with arguments
+	 	/// </summary>
 	 	public CancelPermissionsRequest(string token)
 	 	{
 			this.token = token;
 		}
 
-		/**
-	 	  * Default Constructor
-	 	  */
+		/// <summary>
+		/// Default Constructor
+	 	/// </summary>
 	 	public CancelPermissionsRequest()
 	 	{
 		}
@@ -1532,17 +1597,17 @@ namespace PayPal.Permissions.Model
 
 
 
-	/**
-      *
-      */
+	/// <summary>
+	/// 
+    /// </summary>
 	public partial class CancelPermissionsResponse	{
 		
 		// Default US culture info
 		private static CultureInfo DefaultCulture = new CultureInfo("en-US");
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private ResponseEnvelope responseEnvelopeField;
 		public ResponseEnvelope responseEnvelope
 		{
@@ -1557,9 +1622,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private List<ErrorData> errorField = new List<ErrorData>();
 		public List<ErrorData> error
 		{
@@ -1574,15 +1639,23 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-	 	  * Default Constructor
-	 	  */
+		/// <summary>
+		/// Default Constructor
+	 	/// </summary>
 	 	public CancelPermissionsResponse()
 	 	{
 		}
 
 
-
+		/// <summary>
+		/// Factory method for creating new object instances. For use by the de-serialization classes only.
+	 	/// </summary>
+	 	/// <param name="map">NVP map as returned by an API call</param>
+	 	/// <param name="prefix">NVP prefix for this class in the response</param>
+	 	/// <param name="index">For array elements, index of this element in the response</param>
+	 	/// <returns>
+	 	/// A new CancelPermissionsResponse object created from the passed in NVP map
+	 	/// </returns>
 		public static CancelPermissionsResponse CreateInstance(Dictionary<string, string> map, string prefix, int index)
 		{
 			CancelPermissionsResponse cancelPermissionsResponse = null;
@@ -1630,17 +1703,17 @@ namespace PayPal.Permissions.Model
 
 
 
-	/**
-      *List of Personal Attributes to be sent as a request. 
-      */
+	/// <summary>
+	/// List of Personal Attributes to be sent as a request. 
+    /// </summary>
 	public partial class PersonalAttributeList	{
 		
 		// Default US culture info
 		private static CultureInfo DefaultCulture = new CultureInfo("en-US");
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private List<PersonalAttribute?> attributeField = new List<PersonalAttribute?>();
 		public List<PersonalAttribute?> attribute
 		{
@@ -1655,9 +1728,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-	 	  * Default Constructor
-	 	  */
+		/// <summary>
+		/// Default Constructor
+	 	/// </summary>
 	 	public PersonalAttributeList()
 	 	{
 		}
@@ -1681,19 +1754,19 @@ namespace PayPal.Permissions.Model
 
 
 
-	/**
-      *A property of User Identity data , represented as a
-      *Name-value pair with Name being the PersonalAttribute
-      *requested and value being the data. 
-      */
+	/// <summary>
+	/// A property of User Identity data , represented as a
+	/// Name-value pair with Name being the PersonalAttribute
+	/// requested and value being the data. 
+    /// </summary>
 	public partial class PersonalData	{
 		
 		// Default US culture info
 		private static CultureInfo DefaultCulture = new CultureInfo("en-US");
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private PersonalAttribute? personalDataKeyField;
 		public PersonalAttribute? personalDataKey
 		{
@@ -1708,9 +1781,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private string personalDataValueField;
 		public string personalDataValue
 		{
@@ -1725,15 +1798,23 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-	 	  * Default Constructor
-	 	  */
+		/// <summary>
+		/// Default Constructor
+	 	/// </summary>
 	 	public PersonalData()
 	 	{
 		}
 
 
-
+		/// <summary>
+		/// Factory method for creating new object instances. For use by the de-serialization classes only.
+	 	/// </summary>
+	 	/// <param name="map">NVP map as returned by an API call</param>
+	 	/// <param name="prefix">NVP prefix for this class in the response</param>
+	 	/// <param name="index">For array elements, index of this element in the response</param>
+	 	/// <returns>
+	 	/// A new PersonalData object created from the passed in NVP map
+	 	/// </returns>
 		public static PersonalData CreateInstance(Dictionary<string, string> map, string prefix, int index)
 		{
 			PersonalData personalData = null;
@@ -1772,18 +1853,18 @@ namespace PayPal.Permissions.Model
 
 
 
-	/**
-      *Set of personal data which forms the response of
-      *GetPersonalData call. 
-      */
+	/// <summary>
+	/// Set of personal data which forms the response of
+	/// GetPersonalData call. 
+    /// </summary>
 	public partial class PersonalDataList	{
 		
 		// Default US culture info
 		private static CultureInfo DefaultCulture = new CultureInfo("en-US");
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private List<PersonalData> personalDataField = new List<PersonalData>();
 		public List<PersonalData> personalData
 		{
@@ -1798,15 +1879,23 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-	 	  * Default Constructor
-	 	  */
+		/// <summary>
+		/// Default Constructor
+	 	/// </summary>
 	 	public PersonalDataList()
 	 	{
 		}
 
 
-
+		/// <summary>
+		/// Factory method for creating new object instances. For use by the de-serialization classes only.
+	 	/// </summary>
+	 	/// <param name="map">NVP map as returned by an API call</param>
+	 	/// <param name="prefix">NVP prefix for this class in the response</param>
+	 	/// <param name="index">For array elements, index of this element in the response</param>
+	 	/// <returns>
+	 	/// A new PersonalDataList object created from the passed in NVP map
+	 	/// </returns>
 		public static PersonalDataList CreateInstance(Dictionary<string, string> map, string prefix, int index)
 		{
 			PersonalDataList personalDataList = null;
@@ -1848,20 +1937,20 @@ namespace PayPal.Permissions.Model
 
 
 
-	/**
-      *Request to retrieve basic personal data.Accepts
-      *PersonalAttributeList as request and responds with
-      *PersonalDataList. This call will accept only 'Basic'
-      *attributes and ignore others. 
-      */
+	/// <summary>
+	/// Request to retrieve basic personal data.Accepts
+	/// PersonalAttributeList as request and responds with
+	/// PersonalDataList. This call will accept only 'Basic'
+	/// attributes and ignore others. 
+    /// </summary>
 	public partial class GetBasicPersonalDataRequest	{
 		
 		// Default US culture info
 		private static CultureInfo DefaultCulture = new CultureInfo("en-US");
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private RequestEnvelope requestEnvelopeField;
 		public RequestEnvelope requestEnvelope
 		{
@@ -1876,9 +1965,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private PersonalAttributeList attributeListField;
 		public PersonalAttributeList attributeList
 		{
@@ -1893,17 +1982,17 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-	 	  * Constructor with arguments
-	 	  */
+		/// <summary>
+		/// Constructor with arguments
+	 	/// </summary>
 	 	public GetBasicPersonalDataRequest(PersonalAttributeList attributeList)
 	 	{
 			this.attributeList = attributeList;
 		}
 
-		/**
-	 	  * Default Constructor
-	 	  */
+		/// <summary>
+		/// Default Constructor
+	 	/// </summary>
 	 	public GetBasicPersonalDataRequest()
 	 	{
 		}
@@ -1929,20 +2018,20 @@ namespace PayPal.Permissions.Model
 
 
 
-	/**
-      *Request to retrieve personal data.Accepts
-      *PersonalAttributeList as request and responds with
-      *PersonalDataList. This call will accept both 'Basic' and
-      *Advanced attributes. 
-      */
+	/// <summary>
+	/// Request to retrieve personal data.Accepts
+	/// PersonalAttributeList as request and responds with
+	/// PersonalDataList. This call will accept both 'Basic' and
+	/// Advanced attributes. 
+    /// </summary>
 	public partial class GetAdvancedPersonalDataRequest	{
 		
 		// Default US culture info
 		private static CultureInfo DefaultCulture = new CultureInfo("en-US");
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private RequestEnvelope requestEnvelopeField;
 		public RequestEnvelope requestEnvelope
 		{
@@ -1957,9 +2046,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private PersonalAttributeList attributeListField;
 		public PersonalAttributeList attributeList
 		{
@@ -1974,17 +2063,17 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-	 	  * Constructor with arguments
-	 	  */
+		/// <summary>
+		/// Constructor with arguments
+	 	/// </summary>
 	 	public GetAdvancedPersonalDataRequest(PersonalAttributeList attributeList)
 	 	{
 			this.attributeList = attributeList;
 		}
 
-		/**
-	 	  * Default Constructor
-	 	  */
+		/// <summary>
+		/// Default Constructor
+	 	/// </summary>
 	 	public GetAdvancedPersonalDataRequest()
 	 	{
 		}
@@ -2010,17 +2099,17 @@ namespace PayPal.Permissions.Model
 
 
 
-	/**
-      *
-      */
+	/// <summary>
+	/// 
+    /// </summary>
 	public partial class GetBasicPersonalDataResponse	{
 		
 		// Default US culture info
 		private static CultureInfo DefaultCulture = new CultureInfo("en-US");
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private ResponseEnvelope responseEnvelopeField;
 		public ResponseEnvelope responseEnvelope
 		{
@@ -2035,9 +2124,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private PersonalDataList responseField;
 		public PersonalDataList response
 		{
@@ -2052,9 +2141,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private List<ErrorData> errorField = new List<ErrorData>();
 		public List<ErrorData> error
 		{
@@ -2069,15 +2158,23 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-	 	  * Default Constructor
-	 	  */
+		/// <summary>
+		/// Default Constructor
+	 	/// </summary>
 	 	public GetBasicPersonalDataResponse()
 	 	{
 		}
 
 
-
+		/// <summary>
+		/// Factory method for creating new object instances. For use by the de-serialization classes only.
+	 	/// </summary>
+	 	/// <param name="map">NVP map as returned by an API call</param>
+	 	/// <param name="prefix">NVP prefix for this class in the response</param>
+	 	/// <param name="index">For array elements, index of this element in the response</param>
+	 	/// <returns>
+	 	/// A new GetBasicPersonalDataResponse object created from the passed in NVP map
+	 	/// </returns>
 		public static GetBasicPersonalDataResponse CreateInstance(Dictionary<string, string> map, string prefix, int index)
 		{
 			GetBasicPersonalDataResponse getBasicPersonalDataResponse = null;
@@ -2131,17 +2228,17 @@ namespace PayPal.Permissions.Model
 
 
 
-	/**
-      *
-      */
+	/// <summary>
+	/// 
+    /// </summary>
 	public partial class GetAdvancedPersonalDataResponse	{
 		
 		// Default US culture info
 		private static CultureInfo DefaultCulture = new CultureInfo("en-US");
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private ResponseEnvelope responseEnvelopeField;
 		public ResponseEnvelope responseEnvelope
 		{
@@ -2156,9 +2253,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private PersonalDataList responseField;
 		public PersonalDataList response
 		{
@@ -2173,9 +2270,9 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-          *
-		  */
+		/// <summary>
+		/// 
+		/// </summary>
 		private List<ErrorData> errorField = new List<ErrorData>();
 		public List<ErrorData> error
 		{
@@ -2190,15 +2287,23 @@ namespace PayPal.Permissions.Model
 		}
 		
 
-		/**
-	 	  * Default Constructor
-	 	  */
+		/// <summary>
+		/// Default Constructor
+	 	/// </summary>
 	 	public GetAdvancedPersonalDataResponse()
 	 	{
 		}
 
 
-
+		/// <summary>
+		/// Factory method for creating new object instances. For use by the de-serialization classes only.
+	 	/// </summary>
+	 	/// <param name="map">NVP map as returned by an API call</param>
+	 	/// <param name="prefix">NVP prefix for this class in the response</param>
+	 	/// <param name="index">For array elements, index of this element in the response</param>
+	 	/// <returns>
+	 	/// A new GetAdvancedPersonalDataResponse object created from the passed in NVP map
+	 	/// </returns>
 		public static GetAdvancedPersonalDataResponse CreateInstance(Dictionary<string, string> map, string prefix, int index)
 		{
 			GetAdvancedPersonalDataResponse getAdvancedPersonalDataResponse = null;

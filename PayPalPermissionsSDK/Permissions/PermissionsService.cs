@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Xml;
 using PayPal;
 using PayPal.Authentication;
@@ -12,269 +13,298 @@ namespace PayPal.Permissions
 	public partial class PermissionsService : BasePayPalService 
 	{
 
-		// Service Version
+		/// <summary>
+		/// Service Version
+		/// </summary>
 		private const string ServiceVersion = "";
 
-		// Service Name
+		/// <summary>
+		/// Service Name
+		/// </summary>
 		private const string ServiceName = "Permissions";
 		
-		//SDK Name
-		private const string SDKName = "sdkname";
+		/// <summary>
+		/// SDK Name
+		/// </summary>
+		private const string SDKName = "permissions-dotnet-sdk";
 	
-		//SDK Version
-		private const string SDKVersion = "sdkversion";
+		/// <summary>
+		/// SDK Version
+		/// </summary>
+		private const string SDKVersion = "2.1.96";
 
-		public PermissionsService() {}
+		/// <summary>
+		/// Default constructor for loading configuration from *.Config file
+		/// </summary>
+		public PermissionsService() : base() {}
+		
+		/// <summary>
+		/// constructor for passing in a dynamic configuration object
+		/// </summary>
+		public PermissionsService(Dictionary<string, string> config) : base(config) {}
+		
 
-		/**	
-          *AUTO_GENERATED
-	 	  */
+		/// <summary>
+		/// 
+	 	/// </summary>
+		///<param name="requestPermissionsRequest"></param>
+		///<param name="apiUserName">API Username that you want to authenticate this call against. This username and the corresponding 3-token/certificate credentials must be available in Web.Config/App.Config</param>
 	 	public RequestPermissionsResponse RequestPermissions(RequestPermissionsRequest requestPermissionsRequest, string apiUserName)
-	 	{
-	 		IAPICallPreHandler apiCallPreHandler = null;
-	 		string portName = "Permissions";
-			apiCallPreHandler = new PlatformAPICallPreHandler(requestPermissionsRequest.ToNVPString(string.Empty), ServiceName, "RequestPermissions", apiUserName, getAccessToken(), getAccessTokenSecret());
+	 	{	 		
+			IAPICallPreHandler apiCallPreHandler = new PlatformAPICallPreHandler(this.config, requestPermissionsRequest.ToNVPString(string.Empty), ServiceName, "RequestPermissions", apiUserName, getAccessToken(), getAccessTokenSecret());
 	   	 	((PlatformAPICallPreHandler) apiCallPreHandler).SDKName = SDKName;
 			((PlatformAPICallPreHandler) apiCallPreHandler).SDKVersion = SDKVersion;
-			((PlatformAPICallPreHandler) apiCallPreHandler).PortName = portName;
-			string response = Call(apiCallPreHandler);
+			((PlatformAPICallPreHandler) apiCallPreHandler).PortName = "Permissions";
+			
 			NVPUtil util = new NVPUtil();
-			return RequestPermissionsResponse.CreateInstance(util.ParseNVPString(response), string.Empty, -1);
+			return RequestPermissionsResponse.CreateInstance(util.ParseNVPString(Call(apiCallPreHandler)), string.Empty, -1);
 			
 	 	}
 	 
-	 	/** 
-          *AUTO_GENERATED
-	 	  */
+	 	/// <summary> 
+		/// 
+	 	/// </summary>
+		///<param name="requestPermissionsRequest"></param>
+	 	
 	 	public RequestPermissionsResponse RequestPermissions(RequestPermissionsRequest requestPermissionsRequest)
 	 	{
 	 		return RequestPermissions(requestPermissionsRequest,(string) null);
 	 	}
 	 	
-	 	/**	
-          *AUTO_GENERATED
-	 	  */
+	 	/// <summary>
+		/// 
+	 	/// </summary>
+		///<param name="requestPermissionsRequest"></param>
+		///<param name="credential">An explicit ICredential object that you want to authenticate this call against</param> 
 	 	public RequestPermissionsResponse RequestPermissions(RequestPermissionsRequest requestPermissionsRequest, ICredential credential)
-	 	{
-	 		IAPICallPreHandler apiCallPreHandler = null;
-	 		string portName = "Permissions";
-			apiCallPreHandler = new PlatformAPICallPreHandler(requestPermissionsRequest.ToNVPString(string.Empty), ServiceName, "RequestPermissions", credential);
+	 	{	 			 		
+			IAPICallPreHandler apiCallPreHandler = new PlatformAPICallPreHandler(this.config, requestPermissionsRequest.ToNVPString(string.Empty), ServiceName, "RequestPermissions", credential);
 	   	 	((PlatformAPICallPreHandler) apiCallPreHandler).SDKName = SDKName;
 			((PlatformAPICallPreHandler) apiCallPreHandler).SDKVersion = SDKVersion;
-			((PlatformAPICallPreHandler) apiCallPreHandler).PortName = portName;
-			string response = Call(apiCallPreHandler);
+			((PlatformAPICallPreHandler) apiCallPreHandler).PortName = "Permissions";
+
 			NVPUtil util = new NVPUtil();
-			return RequestPermissionsResponse.CreateInstance(util.ParseNVPString(response), string.Empty, -1);
+			return RequestPermissionsResponse.CreateInstance(util.ParseNVPString(Call(apiCallPreHandler)), string.Empty, -1);
 			
 	 	}
 
-		/**	
-          *AUTO_GENERATED
-	 	  */
+		/// <summary>
+		/// 
+	 	/// </summary>
+		///<param name="getAccessTokenRequest"></param>
+		///<param name="apiUserName">API Username that you want to authenticate this call against. This username and the corresponding 3-token/certificate credentials must be available in Web.Config/App.Config</param>
 	 	public GetAccessTokenResponse GetAccessToken(GetAccessTokenRequest getAccessTokenRequest, string apiUserName)
-	 	{
-	 		IAPICallPreHandler apiCallPreHandler = null;
-	 		string portName = "Permissions";
-			apiCallPreHandler = new PlatformAPICallPreHandler(getAccessTokenRequest.ToNVPString(string.Empty), ServiceName, "GetAccessToken", apiUserName, getAccessToken(), getAccessTokenSecret());
+	 	{	 		
+			IAPICallPreHandler apiCallPreHandler = new PlatformAPICallPreHandler(this.config, getAccessTokenRequest.ToNVPString(string.Empty), ServiceName, "GetAccessToken", apiUserName, getAccessToken(), getAccessTokenSecret());
 	   	 	((PlatformAPICallPreHandler) apiCallPreHandler).SDKName = SDKName;
 			((PlatformAPICallPreHandler) apiCallPreHandler).SDKVersion = SDKVersion;
-			((PlatformAPICallPreHandler) apiCallPreHandler).PortName = portName;
-			string response = Call(apiCallPreHandler);
+			((PlatformAPICallPreHandler) apiCallPreHandler).PortName = "Permissions";
+			
 			NVPUtil util = new NVPUtil();
-			return GetAccessTokenResponse.CreateInstance(util.ParseNVPString(response), string.Empty, -1);
+			return GetAccessTokenResponse.CreateInstance(util.ParseNVPString(Call(apiCallPreHandler)), string.Empty, -1);
 			
 	 	}
 	 
-	 	/** 
-          *AUTO_GENERATED
-	 	  */
+	 	/// <summary> 
+		/// 
+	 	/// </summary>
+		///<param name="getAccessTokenRequest"></param>
+	 	
 	 	public GetAccessTokenResponse GetAccessToken(GetAccessTokenRequest getAccessTokenRequest)
 	 	{
 	 		return GetAccessToken(getAccessTokenRequest,(string) null);
 	 	}
 	 	
-	 	/**	
-          *AUTO_GENERATED
-	 	  */
+	 	/// <summary>
+		/// 
+	 	/// </summary>
+		///<param name="getAccessTokenRequest"></param>
+		///<param name="credential">An explicit ICredential object that you want to authenticate this call against</param> 
 	 	public GetAccessTokenResponse GetAccessToken(GetAccessTokenRequest getAccessTokenRequest, ICredential credential)
-	 	{
-	 		IAPICallPreHandler apiCallPreHandler = null;
-	 		string portName = "Permissions";
-			apiCallPreHandler = new PlatformAPICallPreHandler(getAccessTokenRequest.ToNVPString(string.Empty), ServiceName, "GetAccessToken", credential);
+	 	{	 			 		
+			IAPICallPreHandler apiCallPreHandler = new PlatformAPICallPreHandler(this.config, getAccessTokenRequest.ToNVPString(string.Empty), ServiceName, "GetAccessToken", credential);
 	   	 	((PlatformAPICallPreHandler) apiCallPreHandler).SDKName = SDKName;
 			((PlatformAPICallPreHandler) apiCallPreHandler).SDKVersion = SDKVersion;
-			((PlatformAPICallPreHandler) apiCallPreHandler).PortName = portName;
-			string response = Call(apiCallPreHandler);
+			((PlatformAPICallPreHandler) apiCallPreHandler).PortName = "Permissions";
+
 			NVPUtil util = new NVPUtil();
-			return GetAccessTokenResponse.CreateInstance(util.ParseNVPString(response), string.Empty, -1);
+			return GetAccessTokenResponse.CreateInstance(util.ParseNVPString(Call(apiCallPreHandler)), string.Empty, -1);
 			
 	 	}
 
-		/**	
-          *AUTO_GENERATED
-	 	  */
+		/// <summary>
+		/// 
+	 	/// </summary>
+		///<param name="getPermissionsRequest"></param>
+		///<param name="apiUserName">API Username that you want to authenticate this call against. This username and the corresponding 3-token/certificate credentials must be available in Web.Config/App.Config</param>
 	 	public GetPermissionsResponse GetPermissions(GetPermissionsRequest getPermissionsRequest, string apiUserName)
-	 	{
-	 		IAPICallPreHandler apiCallPreHandler = null;
-	 		string portName = "Permissions";
-			apiCallPreHandler = new PlatformAPICallPreHandler(getPermissionsRequest.ToNVPString(string.Empty), ServiceName, "GetPermissions", apiUserName, getAccessToken(), getAccessTokenSecret());
+	 	{	 		
+			IAPICallPreHandler apiCallPreHandler = new PlatformAPICallPreHandler(this.config, getPermissionsRequest.ToNVPString(string.Empty), ServiceName, "GetPermissions", apiUserName, getAccessToken(), getAccessTokenSecret());
 	   	 	((PlatformAPICallPreHandler) apiCallPreHandler).SDKName = SDKName;
 			((PlatformAPICallPreHandler) apiCallPreHandler).SDKVersion = SDKVersion;
-			((PlatformAPICallPreHandler) apiCallPreHandler).PortName = portName;
-			string response = Call(apiCallPreHandler);
+			((PlatformAPICallPreHandler) apiCallPreHandler).PortName = "Permissions";
+			
 			NVPUtil util = new NVPUtil();
-			return GetPermissionsResponse.CreateInstance(util.ParseNVPString(response), string.Empty, -1);
+			return GetPermissionsResponse.CreateInstance(util.ParseNVPString(Call(apiCallPreHandler)), string.Empty, -1);
 			
 	 	}
 	 
-	 	/** 
-          *AUTO_GENERATED
-	 	  */
+	 	/// <summary> 
+		/// 
+	 	/// </summary>
+		///<param name="getPermissionsRequest"></param>
+	 	
 	 	public GetPermissionsResponse GetPermissions(GetPermissionsRequest getPermissionsRequest)
 	 	{
 	 		return GetPermissions(getPermissionsRequest,(string) null);
 	 	}
 	 	
-	 	/**	
-          *AUTO_GENERATED
-	 	  */
+	 	/// <summary>
+		/// 
+	 	/// </summary>
+		///<param name="getPermissionsRequest"></param>
+		///<param name="credential">An explicit ICredential object that you want to authenticate this call against</param> 
 	 	public GetPermissionsResponse GetPermissions(GetPermissionsRequest getPermissionsRequest, ICredential credential)
-	 	{
-	 		IAPICallPreHandler apiCallPreHandler = null;
-	 		string portName = "Permissions";
-			apiCallPreHandler = new PlatformAPICallPreHandler(getPermissionsRequest.ToNVPString(string.Empty), ServiceName, "GetPermissions", credential);
+	 	{	 			 		
+			IAPICallPreHandler apiCallPreHandler = new PlatformAPICallPreHandler(this.config, getPermissionsRequest.ToNVPString(string.Empty), ServiceName, "GetPermissions", credential);
 	   	 	((PlatformAPICallPreHandler) apiCallPreHandler).SDKName = SDKName;
 			((PlatformAPICallPreHandler) apiCallPreHandler).SDKVersion = SDKVersion;
-			((PlatformAPICallPreHandler) apiCallPreHandler).PortName = portName;
-			string response = Call(apiCallPreHandler);
+			((PlatformAPICallPreHandler) apiCallPreHandler).PortName = "Permissions";
+
 			NVPUtil util = new NVPUtil();
-			return GetPermissionsResponse.CreateInstance(util.ParseNVPString(response), string.Empty, -1);
+			return GetPermissionsResponse.CreateInstance(util.ParseNVPString(Call(apiCallPreHandler)), string.Empty, -1);
 			
 	 	}
 
-		/**	
-          *AUTO_GENERATED
-	 	  */
+		/// <summary>
+		/// 
+	 	/// </summary>
+		///<param name="cancelPermissionsRequest"></param>
+		///<param name="apiUserName">API Username that you want to authenticate this call against. This username and the corresponding 3-token/certificate credentials must be available in Web.Config/App.Config</param>
 	 	public CancelPermissionsResponse CancelPermissions(CancelPermissionsRequest cancelPermissionsRequest, string apiUserName)
-	 	{
-	 		IAPICallPreHandler apiCallPreHandler = null;
-	 		string portName = "Permissions";
-			apiCallPreHandler = new PlatformAPICallPreHandler(cancelPermissionsRequest.ToNVPString(string.Empty), ServiceName, "CancelPermissions", apiUserName, getAccessToken(), getAccessTokenSecret());
+	 	{	 		
+			IAPICallPreHandler apiCallPreHandler = new PlatformAPICallPreHandler(this.config, cancelPermissionsRequest.ToNVPString(string.Empty), ServiceName, "CancelPermissions", apiUserName, getAccessToken(), getAccessTokenSecret());
 	   	 	((PlatformAPICallPreHandler) apiCallPreHandler).SDKName = SDKName;
 			((PlatformAPICallPreHandler) apiCallPreHandler).SDKVersion = SDKVersion;
-			((PlatformAPICallPreHandler) apiCallPreHandler).PortName = portName;
-			string response = Call(apiCallPreHandler);
+			((PlatformAPICallPreHandler) apiCallPreHandler).PortName = "Permissions";
+			
 			NVPUtil util = new NVPUtil();
-			return CancelPermissionsResponse.CreateInstance(util.ParseNVPString(response), string.Empty, -1);
+			return CancelPermissionsResponse.CreateInstance(util.ParseNVPString(Call(apiCallPreHandler)), string.Empty, -1);
 			
 	 	}
 	 
-	 	/** 
-          *AUTO_GENERATED
-	 	  */
+	 	/// <summary> 
+		/// 
+	 	/// </summary>
+		///<param name="cancelPermissionsRequest"></param>
+	 	
 	 	public CancelPermissionsResponse CancelPermissions(CancelPermissionsRequest cancelPermissionsRequest)
 	 	{
 	 		return CancelPermissions(cancelPermissionsRequest,(string) null);
 	 	}
 	 	
-	 	/**	
-          *AUTO_GENERATED
-	 	  */
+	 	/// <summary>
+		/// 
+	 	/// </summary>
+		///<param name="cancelPermissionsRequest"></param>
+		///<param name="credential">An explicit ICredential object that you want to authenticate this call against</param> 
 	 	public CancelPermissionsResponse CancelPermissions(CancelPermissionsRequest cancelPermissionsRequest, ICredential credential)
-	 	{
-	 		IAPICallPreHandler apiCallPreHandler = null;
-	 		string portName = "Permissions";
-			apiCallPreHandler = new PlatformAPICallPreHandler(cancelPermissionsRequest.ToNVPString(string.Empty), ServiceName, "CancelPermissions", credential);
+	 	{	 			 		
+			IAPICallPreHandler apiCallPreHandler = new PlatformAPICallPreHandler(this.config, cancelPermissionsRequest.ToNVPString(string.Empty), ServiceName, "CancelPermissions", credential);
 	   	 	((PlatformAPICallPreHandler) apiCallPreHandler).SDKName = SDKName;
 			((PlatformAPICallPreHandler) apiCallPreHandler).SDKVersion = SDKVersion;
-			((PlatformAPICallPreHandler) apiCallPreHandler).PortName = portName;
-			string response = Call(apiCallPreHandler);
+			((PlatformAPICallPreHandler) apiCallPreHandler).PortName = "Permissions";
+
 			NVPUtil util = new NVPUtil();
-			return CancelPermissionsResponse.CreateInstance(util.ParseNVPString(response), string.Empty, -1);
+			return CancelPermissionsResponse.CreateInstance(util.ParseNVPString(Call(apiCallPreHandler)), string.Empty, -1);
 			
 	 	}
 
-		/**	
-          *AUTO_GENERATED
-	 	  */
+		/// <summary>
+		/// 
+	 	/// </summary>
+		///<param name="getBasicPersonalDataRequest"></param>
+		///<param name="apiUserName">API Username that you want to authenticate this call against. This username and the corresponding 3-token/certificate credentials must be available in Web.Config/App.Config</param>
 	 	public GetBasicPersonalDataResponse GetBasicPersonalData(GetBasicPersonalDataRequest getBasicPersonalDataRequest, string apiUserName)
-	 	{
-	 		IAPICallPreHandler apiCallPreHandler = null;
-	 		string portName = "Permissions";
-			apiCallPreHandler = new PlatformAPICallPreHandler(getBasicPersonalDataRequest.ToNVPString(string.Empty), ServiceName, "GetBasicPersonalData", apiUserName, getAccessToken(), getAccessTokenSecret());
+	 	{	 		
+			IAPICallPreHandler apiCallPreHandler = new PlatformAPICallPreHandler(this.config, getBasicPersonalDataRequest.ToNVPString(string.Empty), ServiceName, "GetBasicPersonalData", apiUserName, getAccessToken(), getAccessTokenSecret());
 	   	 	((PlatformAPICallPreHandler) apiCallPreHandler).SDKName = SDKName;
 			((PlatformAPICallPreHandler) apiCallPreHandler).SDKVersion = SDKVersion;
-			((PlatformAPICallPreHandler) apiCallPreHandler).PortName = portName;
-			string response = Call(apiCallPreHandler);
+			((PlatformAPICallPreHandler) apiCallPreHandler).PortName = "Permissions";
+			
 			NVPUtil util = new NVPUtil();
-			return GetBasicPersonalDataResponse.CreateInstance(util.ParseNVPString(response), string.Empty, -1);
+			return GetBasicPersonalDataResponse.CreateInstance(util.ParseNVPString(Call(apiCallPreHandler)), string.Empty, -1);
 			
 	 	}
 	 
-	 	/** 
-          *AUTO_GENERATED
-	 	  */
+	 	/// <summary> 
+		/// 
+	 	/// </summary>
+		///<param name="getBasicPersonalDataRequest"></param>
+	 	
 	 	public GetBasicPersonalDataResponse GetBasicPersonalData(GetBasicPersonalDataRequest getBasicPersonalDataRequest)
 	 	{
 	 		return GetBasicPersonalData(getBasicPersonalDataRequest,(string) null);
 	 	}
 	 	
-	 	/**	
-          *AUTO_GENERATED
-	 	  */
+	 	/// <summary>
+		/// 
+	 	/// </summary>
+		///<param name="getBasicPersonalDataRequest"></param>
+		///<param name="credential">An explicit ICredential object that you want to authenticate this call against</param> 
 	 	public GetBasicPersonalDataResponse GetBasicPersonalData(GetBasicPersonalDataRequest getBasicPersonalDataRequest, ICredential credential)
-	 	{
-	 		IAPICallPreHandler apiCallPreHandler = null;
-	 		string portName = "Permissions";
-			apiCallPreHandler = new PlatformAPICallPreHandler(getBasicPersonalDataRequest.ToNVPString(string.Empty), ServiceName, "GetBasicPersonalData", credential);
+	 	{	 			 		
+			IAPICallPreHandler apiCallPreHandler = new PlatformAPICallPreHandler(this.config, getBasicPersonalDataRequest.ToNVPString(string.Empty), ServiceName, "GetBasicPersonalData", credential);
 	   	 	((PlatformAPICallPreHandler) apiCallPreHandler).SDKName = SDKName;
 			((PlatformAPICallPreHandler) apiCallPreHandler).SDKVersion = SDKVersion;
-			((PlatformAPICallPreHandler) apiCallPreHandler).PortName = portName;
-			string response = Call(apiCallPreHandler);
+			((PlatformAPICallPreHandler) apiCallPreHandler).PortName = "Permissions";
+
 			NVPUtil util = new NVPUtil();
-			return GetBasicPersonalDataResponse.CreateInstance(util.ParseNVPString(response), string.Empty, -1);
+			return GetBasicPersonalDataResponse.CreateInstance(util.ParseNVPString(Call(apiCallPreHandler)), string.Empty, -1);
 			
 	 	}
 
-		/**	
-          *AUTO_GENERATED
-	 	  */
+		/// <summary>
+		/// 
+	 	/// </summary>
+		///<param name="getAdvancedPersonalDataRequest"></param>
+		///<param name="apiUserName">API Username that you want to authenticate this call against. This username and the corresponding 3-token/certificate credentials must be available in Web.Config/App.Config</param>
 	 	public GetAdvancedPersonalDataResponse GetAdvancedPersonalData(GetAdvancedPersonalDataRequest getAdvancedPersonalDataRequest, string apiUserName)
-	 	{
-	 		IAPICallPreHandler apiCallPreHandler = null;
-	 		string portName = "Permissions";
-			apiCallPreHandler = new PlatformAPICallPreHandler(getAdvancedPersonalDataRequest.ToNVPString(string.Empty), ServiceName, "GetAdvancedPersonalData", apiUserName, getAccessToken(), getAccessTokenSecret());
+	 	{	 		
+			IAPICallPreHandler apiCallPreHandler = new PlatformAPICallPreHandler(this.config, getAdvancedPersonalDataRequest.ToNVPString(string.Empty), ServiceName, "GetAdvancedPersonalData", apiUserName, getAccessToken(), getAccessTokenSecret());
 	   	 	((PlatformAPICallPreHandler) apiCallPreHandler).SDKName = SDKName;
 			((PlatformAPICallPreHandler) apiCallPreHandler).SDKVersion = SDKVersion;
-			((PlatformAPICallPreHandler) apiCallPreHandler).PortName = portName;
-			string response = Call(apiCallPreHandler);
+			((PlatformAPICallPreHandler) apiCallPreHandler).PortName = "Permissions";
+			
 			NVPUtil util = new NVPUtil();
-			return GetAdvancedPersonalDataResponse.CreateInstance(util.ParseNVPString(response), string.Empty, -1);
+			return GetAdvancedPersonalDataResponse.CreateInstance(util.ParseNVPString(Call(apiCallPreHandler)), string.Empty, -1);
 			
 	 	}
 	 
-	 	/** 
-          *AUTO_GENERATED
-	 	  */
+	 	/// <summary> 
+		/// 
+	 	/// </summary>
+		///<param name="getAdvancedPersonalDataRequest"></param>
+	 	
 	 	public GetAdvancedPersonalDataResponse GetAdvancedPersonalData(GetAdvancedPersonalDataRequest getAdvancedPersonalDataRequest)
 	 	{
 	 		return GetAdvancedPersonalData(getAdvancedPersonalDataRequest,(string) null);
 	 	}
 	 	
-	 	/**	
-          *AUTO_GENERATED
-	 	  */
+	 	/// <summary>
+		/// 
+	 	/// </summary>
+		///<param name="getAdvancedPersonalDataRequest"></param>
+		///<param name="credential">An explicit ICredential object that you want to authenticate this call against</param> 
 	 	public GetAdvancedPersonalDataResponse GetAdvancedPersonalData(GetAdvancedPersonalDataRequest getAdvancedPersonalDataRequest, ICredential credential)
-	 	{
-	 		IAPICallPreHandler apiCallPreHandler = null;
-	 		string portName = "Permissions";
-			apiCallPreHandler = new PlatformAPICallPreHandler(getAdvancedPersonalDataRequest.ToNVPString(string.Empty), ServiceName, "GetAdvancedPersonalData", credential);
+	 	{	 			 		
+			IAPICallPreHandler apiCallPreHandler = new PlatformAPICallPreHandler(this.config, getAdvancedPersonalDataRequest.ToNVPString(string.Empty), ServiceName, "GetAdvancedPersonalData", credential);
 	   	 	((PlatformAPICallPreHandler) apiCallPreHandler).SDKName = SDKName;
 			((PlatformAPICallPreHandler) apiCallPreHandler).SDKVersion = SDKVersion;
-			((PlatformAPICallPreHandler) apiCallPreHandler).PortName = portName;
-			string response = Call(apiCallPreHandler);
+			((PlatformAPICallPreHandler) apiCallPreHandler).PortName = "Permissions";
+
 			NVPUtil util = new NVPUtil();
-			return GetAdvancedPersonalDataResponse.CreateInstance(util.ParseNVPString(response), string.Empty, -1);
+			return GetAdvancedPersonalDataResponse.CreateInstance(util.ParseNVPString(Call(apiCallPreHandler)), string.Empty, -1);
 			
 	 	}
 	}
