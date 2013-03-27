@@ -31,7 +31,7 @@ namespace PayPal.Permissions
 		/// <summary>
 		/// SDK Version
 		/// </summary>
-		private const string SDKVersion = "2.1.96";
+		private const string SDKVersion = "2.2.100";
 
 		/// <summary>
 		/// Default constructor for loading configuration from *.Config file

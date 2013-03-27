@@ -1,7 +1,7 @@
-/**
-  * Stub objects for Permissions 
-  * AUTO_GENERATED_CODE 
-  */
+/*
+ * Stub objects for Permissions 
+ * AUTO_GENERATED_CODE 
+ */
 using System;
 using System.Collections;
 using System.Collections.Generic;
