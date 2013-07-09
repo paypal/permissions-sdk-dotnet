@@ -7,6 +7,7 @@
     <title>Permissions</title>
 </head>
 <body>
+	<img src="https://devtools-paypal.com/image/bdg_payments_by_pp_2line.png">
     <form id="form1" runat="server" action="PermissionsHandler.ashx">
         <div>
             <div class="param_name">
