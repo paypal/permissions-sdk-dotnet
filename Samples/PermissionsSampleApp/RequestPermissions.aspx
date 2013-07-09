@@ -7,7 +7,7 @@
     <title>Permissions</title>
 </head>
 <body>
-	<img src="https://devtools-paypal.com/image/bdg_payments_by_pp_2line.png">
+	<img src="https://devtools-paypal.com/image/bdg_payments_by_pp_2line.png" alt="PAYMENTS BY PayPal" />
     <h2>
         RequestPermissions API Test Page</h2>
     <form id="form1" runat="server" action="PermissionsHandler.ashx">
