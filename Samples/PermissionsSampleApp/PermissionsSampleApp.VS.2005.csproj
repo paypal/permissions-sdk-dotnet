@@ -100,9 +100,7 @@
     <Content Include="SanityTest\Web.development.config" />
     <Content Include="ShowError.aspx" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="README.md" />
-  </ItemGroup>
+
   <ItemGroup>
     <Folder Include="Packages\" />
   </ItemGroup>

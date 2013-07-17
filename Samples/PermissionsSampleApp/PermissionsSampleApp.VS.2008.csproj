@@ -121,7 +121,6 @@
     <Content Include="ShowError.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="README.md" />
     <Content Include="Web.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
