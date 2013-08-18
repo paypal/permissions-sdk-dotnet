@@ -90,7 +90,7 @@ namespace PermissionsSampleApp
                 // ## Creating service wrapper object
                 // Creating service wrapper object to make API call and loading
                 // configuration file for your credentials and endpoint
-                PermissionsService service = new PermissionsService(Configuration.GetSignatureConfig());
+                PermissionsService service = new PermissionsService(Configuration.GetAcctAndConfig());
 
                 rpr = service.RequestPermissions(rp);
                 context.Response.Write("<html><body><textarea rows=30 cols=80>");
@@ -132,7 +132,7 @@ namespace PermissionsSampleApp
                 // ## Creating service wrapper object
                 // Creating service wrapper object to make API call and loading
                 // configuration file for your credentials and endpoint
-                PermissionsService service = new PermissionsService(Configuration.GetSignatureConfig());
+                PermissionsService service = new PermissionsService(Configuration.GetAcctAndConfig());
 
                 gats = service.GetAccessToken(gat);
                 context.Response.Write("<html><body><textarea rows=30 cols=80>");
