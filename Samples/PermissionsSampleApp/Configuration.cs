@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace PermissionsSampleApp
 {
-    // For a full list of configuration parameters refer at [https://github.com/paypal/permissions-sdk-dotnet/wiki/SDK-Configuration-Parameters]
+    // For a full list of configuration parameters refer in wiki page [https://github.com/paypal/sdk-core-dotnet/wiki/SDK-Configuration-Parameters]
     public static class Configuration
     {
         // Creates a configuration map containing credentials and other required configuration parameters
@@ -10,10 +10,7 @@ namespace PermissionsSampleApp
         {
             Dictionary<string, string> configMap = new Dictionary<string, string>();
 
-            foreach (KeyValuePair<string, string> pair in GetConfig())
-            {
-                configMap.Add(pair.Key, pair.Value);
-            }
+            configMap = GetConfig();
 
             // Signature Credential
             configMap.Add("account1.apiUsername", "jb-us-seller_api1.paypal.com");

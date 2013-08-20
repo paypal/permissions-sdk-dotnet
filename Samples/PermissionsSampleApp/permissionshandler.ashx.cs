@@ -88,8 +88,10 @@ namespace PermissionsSampleApp
             try
             {
                 // ## Creating service wrapper object
-                // Creating service wrapper object to make API call and loading
-                // configuration file for your credentials and endpoint
+                // Creating service wrapper object to make API call   
+                // Configuration map containing signature credentials and other required configuration.
+                // For a full list of configuration parameters refer in wiki page 
+                // [https://github.com/paypal/sdk-core-dotnet/wiki/SDK-Configuration-Parameters]
                 PermissionsService service = new PermissionsService(Configuration.GetAcctAndConfig());
 
                 rpr = service.RequestPermissions(rp);
@@ -130,8 +132,10 @@ namespace PermissionsSampleApp
             try
             {
                 // ## Creating service wrapper object
-                // Creating service wrapper object to make API call and loading
-                // configuration file for your credentials and endpoint
+                // Creating service wrapper object to make API call   
+                // Configuration map containing signature credentials and other required configuration.
+                // For a full list of configuration parameters refer in wiki page 
+                // [https://github.com/paypal/sdk-core-dotnet/wiki/SDK-Configuration-Parameters]
                 PermissionsService service = new PermissionsService(Configuration.GetAcctAndConfig());
 
                 gats = service.GetAccessToken(gat);
