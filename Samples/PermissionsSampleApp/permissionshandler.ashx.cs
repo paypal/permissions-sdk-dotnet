@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Web;
 
-using PayPal.Util;
-using PayPal;
 using PayPal.Permissions;
 using PayPal.Permissions.Model;
 
-using PayPal.Authentication;
-using PayPal.Exception;
 using System.Configuration;
 namespace PermissionsSampleApp
 {
@@ -23,7 +18,7 @@ namespace PermissionsSampleApp
             //Selenium Test Case
             context.Response.ContentType = "text/html";
 
-            String strCall = context.Request.Params["PermissionsBtn"];
+            string strCall = context.Request.Params["PermissionsBtn"];
 
             if (strCall.Equals("RequestPermissions"))
             {
@@ -92,7 +87,13 @@ namespace PermissionsSampleApp
 
             try
             {
-                PermissionsService service = new PermissionsService();
+                // ## Creating service wrapper object
+                // Creating service wrapper object to make API call   
+                // Configuration map containing signature credentials and other required configuration.
+                // For a full list of configuration parameters refer in wiki page 
+                // [https://github.com/paypal/sdk-core-dotnet/wiki/SDK-Configuration-Parameters]
+                PermissionsService service = new PermissionsService(Configuration.GetAcctAndConfig());
+
                 rpr = service.RequestPermissions(rp);
                 context.Response.Write("<html><body><textarea rows=30 cols=80>");
                 ObjectDumper.Write(rpr, 5, context.Response.Output);
@@ -115,10 +116,10 @@ namespace PermissionsSampleApp
             GetAccessTokenRequest gat = new GetAccessTokenRequest();
 
             // (Required) The request token from the response to RequestPermissions. 
-            String token = context.Request.Params["txtrequest_token"];
+            string token = context.Request.Params["txtrequest_token"];
 
             // (Required) The verification code returned in the redirect from PayPal to the return URL. 
-            String verifier = context.Request.Params["txtverification_code"];
+            string verifier = context.Request.Params["txtverification_code"];
 
             gat.token = token;
             gat.verifier = verifier;
@@ -129,9 +130,14 @@ namespace PermissionsSampleApp
             GetAccessTokenResponse gats = null;
 
             try
-            {   
+            {
+                // ## Creating service wrapper object
+                // Creating service wrapper object to make API call   
+                // Configuration map containing signature credentials and other required configuration.
+                // For a full list of configuration parameters refer in wiki page 
+                // [https://github.com/paypal/sdk-core-dotnet/wiki/SDK-Configuration-Parameters]
+                PermissionsService service = new PermissionsService(Configuration.GetAcctAndConfig());
 
-                PermissionsService service = new PermissionsService();
                 gats = service.GetAccessToken(gat);
                 context.Response.Write("<html><body><textarea rows=30 cols=80>");
                 ObjectDumper.Write(gats, 5, context.Response.Output);
