@@ -59,6 +59,8 @@ The PayPal Permissions API enables you to request and obtain authorization to ma
     PermissionsService service = new PermissionsService(config);
     ```
 
+	You can refer full list of configuration parameters in [wiki](https://github.com/paypal/sdk-core-dotnet/wiki/SDK-Configuration-Parameters) page.
+	
 ## Links
 
    * [Installing NuGet in Visual Studio 2005 & 2008] (https://github.com/paypal/sdk-core-dotnet/wiki/Using-Nuget-in-Visual-Studio-2005-&-2008)
