@@ -64,8 +64,8 @@ namespace PayPal.Permissions.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		private int? errorIdField;
-		public int? errorId
+		private long? errorIdField;
+		public long? errorId
 		{
 			get
 			{
@@ -237,7 +237,7 @@ namespace PayPal.Permissions.Model
 			if (map.ContainsKey(key))
 			{
 				errorData = (errorData == null) ? new ErrorData() : errorData;
-				errorData.errorId = System.Convert.ToInt32(map[key]);
+				errorData.errorId = System.Convert.ToInt64(map[key], DefaultCulture);
 			}
 			key = prefix + "domain";
 			if (map.ContainsKey(key))
