@@ -1,3 +1,9 @@
+Version 2.5.109 - September 10, 2014
+ 
+	- NuGet dependency fix
+	
+You can see source code of this release in github under https://github.com/paypal/permissions-sdk-dotnet/tree/v2.5.109.
+--------------------------------------------------------------------------------------------------
 Version 2.4.109 - November 07, 2013
  
 	- Updated stubs
