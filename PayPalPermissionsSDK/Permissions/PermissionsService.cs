@@ -16,7 +16,7 @@ namespace PayPal.Permissions
 		/// <summary>
 		/// Service Version
 		/// </summary>
-		private const string ServiceVersion = "";
+		private const string ServiceVersion = "109.0";
 
 		/// <summary>
 		/// Service Name
@@ -31,7 +31,7 @@ namespace PayPal.Permissions
 		/// <summary>
 		/// SDK Version
 		/// </summary>
-		private const string SDKVersion = "2.5.109";
+		private const string SDKVersion = "2.6.109";
 
 		/// <summary>
 		/// Default constructor for loading configuration from *.Config file
