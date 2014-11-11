@@ -1,3 +1,8 @@
+Version 2.6.109 - November 11, 2014
+
+	- Updated Core SDK dependency
+	
+--------------------------------------------------------------------------------------------------
 Version 2.5.109 - September 10, 2014
  
 	- NuGet dependency fix
