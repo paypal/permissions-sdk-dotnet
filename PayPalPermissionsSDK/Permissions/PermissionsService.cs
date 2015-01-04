@@ -1,10 +1,6 @@
-using System;
 using System.Collections.Generic;
-using System.Xml;
-using PayPal;
 using PayPal.Authentication;
 using PayPal.Util;
-using PayPal.Manager;
 using PayPal.NVP;
 using PayPal.Permissions.Model;
 
@@ -12,11 +8,6 @@ namespace PayPal.Permissions
 {
 	public partial class PermissionsService : BasePayPalService 
 	{
-
-		/// <summary>
-		/// Service Version
-		/// </summary>
-		private const string ServiceVersion = "109.0";
 
 		/// <summary>
 		/// Service Name
