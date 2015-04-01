@@ -7,8 +7,8 @@
 The repository contains the PayPal Permissions SDK C#.NET Class Library Application and the PermissionsSampleApp Sample ASP.NET C# Web Application.
 
 
-SDK Integration
----------------
+## SDK Integration
+
 *	Integrate the PayPal Permissions SDK with an ASP.NET Web Application
 
 *	Use NuGet to install the 'PayPalPermissionsSDK' package 
@@ -27,9 +27,12 @@ SDK Integration
 	•	PayPal.Util
 	•	PayPal.Exception
 
-	
-Help
-----
+## Using Classic SDKs and PayPal .NET SDK
+
+[See here](https://github.com/paypal/merchant-sdk-dotnet#using-classic-sdks-and-paypal-net-sdk) for instructions on how to use this SDK along with the [PayPal .NET SDK](https://github.com/paypal/PayPal-NET-SDK).
+
+## Help
+
 *	Permissions.bat - Automation script that builds the PayPal Permissions SDK C#.NET Class Library Application in release mode and copies the built dlls to the lib folder in the PermissionsSampleApp Sample ASP.NET C# Web Application
 
 *	Changelog.txt - Release Notes
