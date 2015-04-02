@@ -1,3 +1,8 @@
+Version 2.7.109 - April 2, 2015
+
+	- Updated Core SDK dependency
+	
+--------------------------------------------------------------------------------------------------
 Version 2.6.109 - November 11, 2014
 
 	- Updated Core SDK dependency
